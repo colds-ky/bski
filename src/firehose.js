@@ -1,16 +1,17 @@
 // @ts-check
-/// <reference types="@atproto/api" />
+/// <reference types='@atproto/api' />
 
 import { version } from '../package.json'
 export { version };
 
-import {
-  addExtension as cbor_x_addExtension,
-  decodeMultiple as cbor_x_decodeMultiple,
-  decode as cbor_x_decode
-} from './decode/cbor-x/decoder';
-import { decode as decodeCID } from './decode/js-multiformats/cid';
-import { CarBufferReader as ipld_CarBufferReader } from './decode/js-car/buffer-reader-browser';
+import { decodeMultiple, decode as decodeCBOR } from './decode/cbor-x/decoder';
+import { CarBufferReader } from './decode/js-car/buffer-reader-browser';
+
+import { decode, decodeFirst } from './decode/cbor/decode';
+import { fromBytes } from './decode/cbor/bytes';
+import { readCar } from './decode/car/reader';
+
+const emptyUint8Array = new Uint8Array();
 
 /**
  * @typedef {{
@@ -144,8 +145,6 @@ firehose.version = version;
  * @returns {AsyncGenerator<FirehoseRecord[], void, void>}
  */
 export async function* firehose(address) {
-  _ensureCborXExtended();
-
   const WebSocketImpl = typeof WebSocket === 'function' ? WebSocket :
     requireWebsocket();
 
@@ -237,13 +236,131 @@ export async function* firehose(address) {
   }
 
   /**
+ * @param {number} receiveTimestamp
+ * @param {number} parseStart
+ * @param {Uint8Array} messageBuf
+ */
+  function parseMessageBufWorker(receiveTimestamp, parseStart, messageBuf) {
+    const [header, remainder] = decodeFirst(messageBuf);
+    const [body, remainder2] = decodeFirst(remainder);
+    if (remainder2.length > 0) {
+      return buf.block.push({
+        $type: 'error',
+        message: 'Excess bytes in message.',
+        receiveTimestamp,
+        parseTime: Date.now() - parseStart
+      });
+    }
+
+    const { t, op } = parseHeader(header);
+
+    if (op === -1) {
+      return buf.block.push({
+        $type: 'error',
+        message: 'Error header#' + body.error + ': ' + body.message,
+        receiveTimestamp,
+        parseTime: Date.now() - parseStart
+      });
+    }
+
+    if (t === '#commit') {
+      const commit = body;
+
+      // A commit can contain no changes
+      if (!('blocks' in commit) || !(commit.blocks.$bytes.length)) {
+        return buf.block.push({
+          $type: 'com.atproto.sync.subscribeRepos#commit',
+          ...commit,
+          blocks: emptyUint8Array,
+          ops: [],
+          receiveTimestamp,
+          parseTime: Date.now() - parseStart
+        });
+      }
+
+      const blocks = fromBytes(commit.blocks);
+      const car = readCar(blocks);
+      for (let opIndex = 0; opIndex < commit.ops.length; opIndex++) {
+        const op = commit.ops[opIndex];
+        const action = op.action;
+
+        const now = Date.now();
+
+        if (action === 'create' || action === 'update') {
+          if (!op.cid) {
+            buf.block.push({
+              $type: 'error',
+              message: 'Missing commit.ops[' + (opIndex - 1) + '].cid.',
+              receiveTimestamp,
+              parseTime: now - parseStart,
+              commit
+            });
+            parseStart = now;
+            continue;
+          }
+
+          const record = car.get(op.cid);
+          if (!record) {
+            buf.block.push({
+              $type: 'error',
+              message: 'Unresolved commit.ops[' + (opIndex - 1) + '].cid ' + op.cid,
+              receiveTimestamp,
+              parseTime: now - parseStart,
+              commit
+            });
+            parseStart = now;
+            continue;
+          }
+
+          record.action = action;
+          record.path = op.path;
+          record.cid = op.cid;
+          record.receiveTimestamp = receiveTimestamp;
+          record.parseTime = now - parseStart;
+
+          buf.block.push(record);
+        } else if (action === 'delete') {
+          const now = Date.now();
+          buf.block.push({
+            action,
+            path: op.path,
+            receiveTimestamp,
+            parseTime: now - parseStart
+          });
+          parseStart = now;
+        } else {
+          throw new Error(`Unknown action: ${action}`);
+        }
+      }).filter((op): op is Exclude<typeof op, undefined> => !!op);
+
+      return {
+        $type: 'com.atproto.sync.subscribeRepos#commit',
+        ...commit,
+        blocks,
+        ops,
+      } satisfies ParsedCommit;
+    }
+    return { $type: `com.atproto.sync.subscribeRepos${t}`, ...body };
+
+  }
+
+  function parseHeader(header) {
+    if (
+      !header || typeof header !== 'object' || !header.t || typeof header.t !== 'string'
+      || !header.op || typeof header.op !== 'number'
+    ) throw new Error('Invalid header received');
+    return { t: header.t, op: header.op };
+  }
+
+
+  /**
    * @param {number} receiveTimestamp
    * @param {number} parseStart
    * @param {Uint8Array} messageBuf
    */
-  function parseMessageBufWorker(receiveTimestamp, parseStart, messageBuf) {
+  function parseMessageBufWorker_old(receiveTimestamp, parseStart, messageBuf) {
 
-    const entry = /** @type {any[]} */(cbor_x_decodeMultiple(messageBuf));
+    const entry = /** @type {any[]} */(decodeMultiple(messageBuf));
 
     if (!entry)
       return buf.block.push({
@@ -307,7 +424,7 @@ export async function* firehose(address) {
       });
     }
 
-    const car = ipld_CarBufferReader.fromBytes(commit.blocks);
+    const car = CarBufferReader.fromBytes(commit.blocks);
 
     let opIndex = 0;
     for (const op of commit.ops) {
@@ -355,7 +472,7 @@ export async function* firehose(address) {
       }
 
       /** @type {FirehoseRepositoryRecord<keyof RepositoryRecordTypes$>} */
-      const record = cbor_x_decode(block.bytes);
+      const record = decodeCBOR(block.bytes);
       record.repo = commit.repo;
       record.uri = 'at://' + commit.repo + '/' + op.path;
       record.action = op.action;
@@ -403,24 +520,4 @@ function createAwaitPromise() {
     result.reject = reject;
   });
   return /** @type {*} */(result);
-}
-
-let cbor_x_extended = false;
-
-export function _ensureCborXExtended() {
-  if (cbor_x_extended) return;
-
-  cbor_x_addExtension({
-    Class: function CIDPlaceholder() { },
-    tag: 42,
-    encode: () => {
-      throw new Error("cannot encode cids");
-    },
-    decode: (bytes) => {
-      if (bytes[0] !== 0) throw new Error("invalid cid for cbor tag 42");
-      return decodeCID(bytes.subarray(1)); // ignore leading 0x00
-    },
-  });
-
-  cbor_x_extended = true;
 }
