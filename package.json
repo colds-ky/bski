@@ -1,9 +1,10 @@
 {
   "name": "bski",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "author": "Oleg Mihailik",
   "license": "MIT",
   "description": "BlueSky firehose/WebSocket and CAR in plain JavaScript",
+  "repository": "https://github.com/colds-ky/bski",
   "main": "src/index.js",
   "exports": {
     "import": "./src/index.js",
