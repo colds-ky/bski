@@ -49,13 +49,24 @@
 
   parsedSubtitle.textContent= 'Fetched @' + handle + ' CAR[' + data.byteLength.toLocaleString() + '], parsing...';
   const startParsing = Date.now();
-  const parsed = bski.readCAR(bskyAppDID, data);
+  const parsed = bski.readCAR(data, bskyAppDID);
   const parseTime = Date.now() - startParsing;
+
+  const bskyAppObj2 = [];
+  let parseTime2 = 0
+  for (const chunk of bski.sequenceReadCAR2(data, bskyAppDID)) {
+    if (chunk) {
+      parseTime2 += chunk.parseTime;
+      for (const rec of chunk) {
+        bskyAppObj2.push(rec);
+      }
+    }
+  }
 
   parsedSubtitle.textContent =
     'Fetched @' + handle + ' CAR[' + data.byteLength.toLocaleString() + 'b],' +
     ' parsed ' + parsed.length.toLocaleString() +
-    ' in ' + parseTime.toLocaleString() + 'ms';
+    ' in ' + parseTime.toLocaleString() + 'ms/' + parseTime2;
 
   const samplePre = document.createElement('pre');
   samplePre.style.fontSize = '80%';

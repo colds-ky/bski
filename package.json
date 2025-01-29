@@ -1,6 +1,6 @@
 {
   "name": "bski",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "author": "Oleg Mihailik",
   "license": "MIT",
   "description": "BlueSky firehose/WebSocket and CAR in plain JavaScript",
