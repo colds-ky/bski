@@ -170,6 +170,8 @@ export async function* firehose(address) {
           break;
         }
         yield block;
+      } else {
+        buf = createAwaitPromise();
       }
     }
   } finally {
