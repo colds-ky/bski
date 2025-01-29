@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bski test</title>
+</head>
+<body>
+ 
+<script src="index.js"></script>
+<script type="module">
+(async () => {
+  const totals = document.createElement('h4');
+  document.body.appendChild(totals);
+  totals.textContent = 'Fetching from firehose...';
+
+  let waitFor = 0;
+  let firehoseCount = 0;
+  for await (const msg of bski.firehose.each()) {
+    console.log(msg);
+    totals.textContent = 'Fetching from firehose: ' + (++firehoseCount).toLocaleString() + '...';
+    const msgPre = document.createElement('pre');
+    msgPre.textContent = JSON.stringify(msg, null, 2);
+    document.body.appendChild(msgPre);
+
+    if (!waitFor) waitFor = Date.now() + 1000;
+    if (Date.now() > waitFor) {
+      break;
+    }
+  }
+  totals.textContent = 'Fetched from firehose: ' + firehoseCount.toLocaleString();
+
+  const bskyAppDID = 'did:plc:z72i7hdynmk6r22z27h6tvur';
+  const bskyAppPds = 'https://puffball.us-east.host.bsky.network';
+
+  const retr0idDID = 'did:plc:vwzwgnygau7ed7b7wt5ux7y2';
+  const retr0idPds = 'https://shiitake.us-east.host.bsky.network';
+
+  await downloadCAR('bsky.app', bskyAppDID, bskyAppPds);
+  // await downloadCAR('retr0.id', retr0idDID, retr0idPds);
+
+  async function downloadCAR(handle, did, pds) {
+
+  const parsedSubtitle = document.createElement('blockquote');
+  document.body.insertBefore(parsedSubtitle, totals.nextElementSibling);
+  parsedSubtitle.textContent = 'Fetching @' + handle + ' CAR...';
+
+  const data = await fetch(pds +  '/xrpc/com.atproto.sync.getRepo?did=' +did).then(x=>x.arrayBuffer());
+
+  parsedSubtitle.textContent= 'Fetched @' + handle + ' CAR[' + data.byteLength.toLocaleString() + '], parsing...';
+  const startParsing = Date.now();
+  const parsed = bski.readCAR(bskyAppDID, data);
+  const parseTime = Date.now() - startParsing;
+
+  parsedSubtitle.textContent =
+    'Fetched @' + handle + ' CAR[' + data.byteLength.toLocaleString() + 'b],' +
+    ' parsed ' + parsed.length.toLocaleString() +
+    ' in ' + parseTime.toLocaleString() + 'ms';
+
+  const samplePre = document.createElement('pre');
+  samplePre.style.fontSize = '80%';
+  samplePre.textContent =
+    JSON.stringify(parsed[0], null, 2) + '\n...\n' +
+    JSON.stringify(parsed[parsed.length - 1], null, 2);
+
+    parsedSubtitle.appendChild(samplePre);
+  }
+})()
+</script>
+
+</body>
+</html>
