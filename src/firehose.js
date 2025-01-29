@@ -1,15 +1,13 @@
 // @ts-check
 /// <reference types='@atproto/api' />
 
-import { version } from '../package.json'
-export { version };
-
-import { decodeMultiple, decode as decodeCBOR } from './decode/cbor-x/decoder';
-import { CarBufferReader } from './decode/js-car/buffer-reader-browser';
-
-import { decode, decodeFirst } from './decode/cbor/decode';
-import { fromBytes } from './decode/cbor/bytes';
 import { readCar } from './decode/car/reader';
+import { fromBytes } from './decode/cbor/bytes';
+import { toCIDLink } from './decode/cbor/cid-link';
+import { decode, decodeFirst } from './decode/cbor/decode';
+
+import { version } from '../package.json';
+export { version };
 
 const emptyUint8Array = new Uint8Array();
 
@@ -219,7 +217,7 @@ export async function* firehose(address) {
    * @param {Uint8Array} messageBuf
    */
   function parseMessageBuf(receiveTimestamp, messageBuf) {
-    const parseStart = Date.now();
+    const parseStart = performance.now();
     try {
       parseMessageBufWorker(receiveTimestamp, parseStart, messageBuf);
       buf.resolve();
@@ -228,7 +226,7 @@ export async function* firehose(address) {
         $type: 'error',
         message: parseError.message,
         receiveTimestamp,
-        parseTime: Date.now() - parseStart
+        parseTime: performance.now() - parseStart
       });
     }
 
@@ -248,18 +246,18 @@ export async function* firehose(address) {
         $type: 'error',
         message: 'Excess bytes in message.',
         receiveTimestamp,
-        parseTime: Date.now() - parseStart
+        parseTime: performance.now() - parseStart
       });
     }
 
-    const { t, op } = parseHeader(header);
+    const { t, op } = header;
 
     if (op === -1) {
       return buf.block.push({
         $type: 'error',
         message: 'Error header#' + body.error + ': ' + body.message,
         receiveTimestamp,
-        parseTime: Date.now() - parseStart
+        parseTime: performance.now() - parseStart
       });
     }
 
@@ -274,17 +272,18 @@ export async function* firehose(address) {
           blocks: emptyUint8Array,
           ops: [],
           receiveTimestamp,
-          parseTime: Date.now() - parseStart
+          parseTime: performance.now() - parseStart
         });
       }
 
       const blocks = fromBytes(commit.blocks);
-      const car = readCar(blocks);
+      const car = readCarToMap(blocks);
       for (let opIndex = 0; opIndex < commit.ops.length; opIndex++) {
         const op = commit.ops[opIndex];
         const action = op.action;
 
-        const now = Date.now();
+        const now = performance.now();
+        const record = op.cid ? car.get(op.cid) : undefined;
 
         if (action === 'create' || action === 'update') {
           if (!op.cid) {
@@ -299,7 +298,6 @@ export async function* firehose(address) {
             continue;
           }
 
-          const record = car.get(op.cid);
           if (!record) {
             buf.block.push({
               $type: 'error',
@@ -313,14 +311,15 @@ export async function* firehose(address) {
           }
 
           record.action = action;
+          record.uri = 'at://' + commit.repo + '/' + op.path;
           record.path = op.path;
           record.cid = op.cid;
           record.receiveTimestamp = receiveTimestamp;
           record.parseTime = now - parseStart;
 
           buf.block.push(record);
+          continue;
         } else if (action === 'delete') {
-          const now = Date.now();
           buf.block.push({
             action,
             path: op.path,
@@ -329,163 +328,26 @@ export async function* firehose(address) {
           });
           parseStart = now;
         } else {
-          throw new Error(`Unknown action: ${action}`);
-        }
-      }).filter((op): op is Exclude<typeof op, undefined> => !!op);
-
-      return {
-        $type: 'com.atproto.sync.subscribeRepos#commit',
-        ...commit,
-        blocks,
-        ops,
-      } satisfies ParsedCommit;
-    }
-    return { $type: `com.atproto.sync.subscribeRepos${t}`, ...body };
-
-  }
-
-  function parseHeader(header) {
-    if (
-      !header || typeof header !== 'object' || !header.t || typeof header.t !== 'string'
-      || !header.op || typeof header.op !== 'number'
-    ) throw new Error('Invalid header received');
-    return { t: header.t, op: header.op };
-  }
-
-
-  /**
-   * @param {number} receiveTimestamp
-   * @param {number} parseStart
-   * @param {Uint8Array} messageBuf
-   */
-  function parseMessageBufWorker_old(receiveTimestamp, parseStart, messageBuf) {
-
-    const entry = /** @type {any[]} */(decodeMultiple(messageBuf));
-
-    if (!entry)
-      return buf.block.push({
-        $type: 'error',
-        message: 'CBOR decodeMultiple returned empty.',
-        receiveTimestamp,
-        parseTime: Date.now() - parseStart
-      });
-
-    if (entry[0]?.op !== 1) return buf.block.push({
-      $type: 'error',
-      message: 'Expected CBOR op:1.',
-      receiveTimestamp,
-      parseTime: Date.now() - parseStart,
-      entry: entry
-    });
-
-    const commit = entry[1];
-    const t = entry[0].t;
-    if (t === '#identity' && commit.did) {
-      /** @type {FirehoseIdentityRecord} */
-      const identityRecord = {
-        $type: '#identity',
-        repo: commit.did,
-        handle: commit.handle,
-        time: commit.time,
-        receiveTimestamp,
-        parseTime: Date.now() - parseStart
-      };
-      buf.block.push(identityRecord);
-      return;
-    } else if (t === '#account' && commit.did) {
-      /** @type {FirehoseAccountRecord} */
-      const accountRecord = {
-        $type: '#identity',
-        repo: commit.did,
-        active: commit.active,
-        time: commit.time,
-        receiveTimestamp,
-        parseTime: Date.now() - parseStart
-      };
-      buf.block.push(accountRecord);
-      return;
-    }
-
-    if (!commit.blocks?.length) return buf.block.push({
-      $type: 'error',
-      message: 'Expected operation with commit.blocks.',
-      receiveTimestamp,
-      parseTime: Date.now() - parseStart,
-      commit
-    });
-
-    if (!commit.ops?.length) {
-      return buf.block.push({
-        $type: 'error',
-        message: 'Expected operation with commit.ops.',
-        receiveTimestamp,
-        parseTime: Date.now() - parseStart,
-        commit
-      });
-    }
-
-    const car = CarBufferReader.fromBytes(commit.blocks);
-
-    let opIndex = 0;
-    for (const op of commit.ops) {
-      opIndex++;
-
-      if (!op.cid) {
-        if (op.action === 'delete') {
-          const posPathSlash = op.path?.indexOf('/');
-          const type = posPathSlash > 0 ? op.path.slice(0, posPathSlash) : op.path;
-          /** @type {FirehoseDeleteRecord} */
-          const deleteRecord = {
-            repo: commit.repo,
-            uri: 'at://' + commit.repo + '/' + op.path,
-            action: 'delete',
-            path: op.path,
-            $type: type,
-            since: commit.since,
-            time: commit.time,
-            receiveTimestamp,
-            parseTime: Date.now() - parseStart
-          };
-          buf.block.push(deleteRecord);
-        } else {
           buf.block.push({
             $type: 'error',
-            message: 'Missing commit.ops[' + (opIndex - 1) + '].cid.',
+            message: 'Unknown action ' + op.action,
+            ...record,
             receiveTimestamp,
-            parseTime: Date.now() - parseStart,
-            commit
+            parseTime: now - parseStart
           });
+          parseStart = now;
+          continue;
         }
-        continue;
       }
-
-      const block = car.get(op.cid);
-      if (!block) {
-        buf.block.push({
-          $type: 'error',
-          message: 'Unresolvable commit.ops[' + (opIndex - 1) + '].cid ' + op.cid + '.',
-          receiveTimestamp,
-          parseTime: Date.now() - parseStart,
-          commit
-        });
-        continue;
-      }
-
-      /** @type {FirehoseRepositoryRecord<keyof RepositoryRecordTypes$>} */
-      const record = decodeCBOR(block.bytes);
-      record.repo = commit.repo;
-      record.uri = 'at://' + commit.repo + '/' + op.path;
-      record.action = op.action;
-      record.path = op.path;
-      record.since = commit.since;
-      record.time = commit.time;
-      record.receiveTimestamp = receiveTimestamp;
-      record.parseTime = Date.now() - parseStart;
-
-      record['seq'] = commit.seq;
-
-      buf.block.push(/** @type {FirehoseRecord} */(record));
+      return;
     }
+
+    return buf.block.push({
+      $type: t,
+      ...body,
+      receiveTimestamp,
+      parseTime: performance.now() - parseStart
+    });
   }
 
   function handleError(error) {
@@ -520,4 +382,13 @@ function createAwaitPromise() {
     result.reject = reject;
   });
   return /** @type {*} */(result);
+}
+
+/** @param {Uint8Array} buffer */
+function readCarToMap(buffer) {
+  const records = new Map();
+  for (const { cid, bytes } of readCar(buffer).iterate()) {
+    records.set(toCIDLink(cid), decode(bytes));
+  }
+  return records;
 }

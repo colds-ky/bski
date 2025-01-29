@@ -225,6 +225,7 @@ export function* sequenceReadCAR(messageBuf, did) {
     /** @type {import('./firehose').FirehoseRecord} */
     const record = entry[1];
     record.repo = did;
+    record.cid = cid;
     const key = keyByCID.get(cid);
     if (key) {
       record.path = key;

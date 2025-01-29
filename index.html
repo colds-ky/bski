@@ -16,19 +16,22 @@
 
   let waitFor = 0;
   let firehoseCount = 0;
+  let totalFirehoseParseTime = 0;
   for await (const msg of bski.firehose.each()) {
     console.log(msg);
-    totals.textContent = 'Fetching from firehose: ' + (++firehoseCount).toLocaleString() + '...';
+    totals.textContent = 'Fetching from firehose: ' + (++firehoseCount).toLocaleString() + ', parsed in ' + (totalFirehoseParseTime / firehoseCount).toFixed(3) + 'ms/msg...';
     const msgPre = document.createElement('pre');
     msgPre.textContent = JSON.stringify(msg, null, 2);
     document.body.appendChild(msgPre);
+
+    if (msg.parseTime) totalFirehoseParseTime += msg.parseTime;
 
     if (!waitFor) waitFor = Date.now() + 1000;
     if (Date.now() > waitFor) {
       break;
     }
   }
-  totals.textContent = 'Fetched from firehose: ' + firehoseCount.toLocaleString();
+  totals.textContent = 'Fetched from firehose: ' + firehoseCount.toLocaleString() + ', parsed in ' + (totalFirehoseParseTime / firehoseCount).toFixed(3) + 'ms/msg';
 
   const bskyAppDID = 'did:plc:z72i7hdynmk6r22z27h6tvur';
   const bskyAppPds = 'https://puffball.us-east.host.bsky.network';
@@ -52,21 +55,10 @@
   const parsed = bski.readCAR(data, bskyAppDID);
   const parseTime = Date.now() - startParsing;
 
-  const bskyAppObj2 = [];
-  let parseTime2 = 0
-  for (const chunk of bski.sequenceReadCAR2(data, bskyAppDID)) {
-    if (chunk) {
-      parseTime2 += chunk.parseTime;
-      for (const rec of chunk) {
-        bskyAppObj2.push(rec);
-      }
-    }
-  }
-
   parsedSubtitle.textContent =
     'Fetched @' + handle + ' CAR[' + data.byteLength.toLocaleString() + 'b],' +
     ' parsed ' + parsed.length.toLocaleString() +
-    ' in ' + parseTime.toLocaleString() + 'ms/' + parseTime2;
+    ' in ' + parseTime.toLocaleString() + 'ms';
 
   const samplePre = document.createElement('pre');
   samplePre.style.fontSize = '80%';

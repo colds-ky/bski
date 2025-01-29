@@ -50,13 +50,12 @@ using some of the packages referenced by the official [@atproto/api](https://www
 * [@ipld/dag-cbor](https://github.com/ipld/js-dag-cbor) - Apache 2.0 and MIT
 * [varint](https://github.com/chrisdickinson/varint) - MIT
 
-But those are pretty complex and convoluted libraries, even doing JavaScript codegeneration at some point.
+But those are complex and broader-purpose libraries.
+Later [@mary.my.id](https://bsky.app/profile/mary.my.id) created leaner,
+more focused set of libraries to transcode some of the same formats, [@atcute/*](https://github.com/mary-ext/atcute) - MIT license.
 
-The goal of this library is to take in any necessary bits, remove generalist complexity
-and focus on singular use case: parsing realtime firehose, and account repository CAR.
-
-These use variations of the same binary format, and polishing and optimising this code
-hopefully will provide a strong basis to browser-based tools in the `AT`mosphere.
+And now this library here is taking in only few necessary bits, focusing on singular use case:
+parsing realtime firehose, and account repository CAR.
 
 # License and links
 
