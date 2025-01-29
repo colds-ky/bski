@@ -35,6 +35,7 @@ const emptyUint8Array = new Uint8Array();
  * @typedef {RepositoryRecordTypes$[$Type] & {
  *  repo: string,
  *  uri: string,
+ *  cid: string,
  *  action: 'create' | 'update',
  *  path: string,
  *  $type: $Type,
