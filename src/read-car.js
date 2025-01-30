@@ -19,136 +19,35 @@ export function readCAR(messageBuf, did) {
   if (typeof messageBuf === 'string')
     [messageBuf, did] = /** @type {[any, any]} */([did, messageBuf]);
 
-  /** @type {import('./firehose').FirehoseRecord[] & { parseTime: number } | undefined} */
-  let last;
-  for (const _chunk of sequenceReadCAR(messageBuf, did)) {
-    if (_chunk) last = _chunk;
+  /** @type {import('./firehose').FirehoseRepositoryRecord<keyof import('./firehose').RepositoryRecordTypes$>[] & { parseTime: number } | undefined} */
+  let all;
+  for (const _chunk of sequenceReadCARCore(messageBuf, did, Infinity)) {
+    if (_chunk) all = _chunk;
   }
-  return   /** @type {NonNullable<typeof last>} */(last);
+  return   /** @type {NonNullable<typeof all>} */(all);
 }
-
-// /**
-//  * @param {ArrayBuffer | Uint8Array} messageBuf
-//  * @param {string} did
-//  * @returns {Generator<import('./firehose').FirehoseRecord[] & { parseTime: number } | undefined>}
-//  */
-// export function* sequenceReadCAR(messageBuf, did) {
-//   if (typeof messageBuf === 'string')
-//     [messageBuf, did] = /** @type {[any, any]} */([did, messageBuf]);
-
-//   const parseStart = Date.now();
-//   let pauseTime = 0;
-
-//   const bytes = messageBuf instanceof ArrayBuffer ? new Uint8Array(messageBuf) : messageBuf;
-
-//   const car = CarBufferReader.fromBytes(bytes);
-
-//   const recordsByCID = new Map();
-//   const keyByCID = new Map();
-//   const errors = [];
-//   const blocks = typeof car._blocks === 'object' && car._blocks && Array.isArray(car._blocks) ? car._blocks : car.blocks();
-//   const decoder = new TextDecoder();
-
-//   let iteration = 0;
-//   for (const block of blocks) {
-//     iteration++;
-//     if (iteration % YIELD_AFTER_ITERATION === YIELD_AFTER_ITERATION - 1) {
-//       const pauseStart = Date.now();
-//       yield;
-//       pauseTime += Date.now() - pauseStart;
-//     }
-
-//     const record = decodeCBOR(block.bytes);
-//     if (record.$type) recordsByCID.set(block.cid, record);
-//     else if (Array.isArray(record.e)) {
-//       let key = '';
-//       for (const sub of record.e) {
-//         iteration++;
-//         if (iteration % YIELD_AFTER_ITERATION === YIELD_AFTER_ITERATION - 1) {
-//           const pauseStart = Date.now();
-//           yield;
-//           pauseTime += Date.now() - pauseStart;
-//         }
-
-//         if (!sub.k || !sub.v) continue;
-//         try {
-//           const keySuffix = decoder.decode(sub.k);
-//           key = key.slice(0, sub.p || 0) + keySuffix;
-
-//           let cid;
-//           if (typeof sub.v === 'string') {
-//             cid = sub.v;
-//           } else if (sub.v.value) {
-//             const expandWithoutZero =
-//               sub.v.value[0] ? sub.v.value :
-//             /** @type {Uint8Array} */(sub.v.value).subarray(1);
-//             cid = decodeCID(expandWithoutZero);
-//           }
-
-//           if (!cid) continue;
-
-//           keyByCID.set(cid, key);
-//         } catch (error) {
-//           if (!errors.length) console.error(error);
-//           errors.push(error);
-//         }
-//       }
-//     }
-//   }
-
-//   /** @type {import('./firehose').FirehoseRecord[] & { parseTime: number }} */
-//   const records = /** @type {*} */([]);
-//   for (const entry of recordsByCID) {
-//     iteration++;
-//     if (iteration % YIELD_AFTER_ITERATION === YIELD_AFTER_ITERATION - 1) {
-//       const pauseStart = Date.now();
-//       records.parseTime = pauseStart - parseStart - pauseTime;
-//       yield;
-//       pauseTime += Date.now() - pauseStart;
-//     }
-
-//     const cid = entry[0];
-//     /** @type {import('./firehose').FirehoseRecord} */
-//     const record = entry[1];
-//     record.repo = did;
-//     const key = keyByCID.get(cid);
-//     if (key) {
-//       record.path = key;
-//       record.uri = 'at://' + did + '/' + key;
-//     }
-
-//     // let's recreate the record, to pack the GC and avoid deoptimized objects
-//     records.push(record);
-//   }
-
-//   // record.seq = commit.seq; 471603945
-//   // record.since = /** @type {string} */(commit.since); 3ksfhcmgghv2g
-//   // record.action = op.action;
-//   // record.cid = cid;
-//   // record.path = op.path;
-//   // record.timestamp = commit.time ? Date.parse(commit.time) : Date.now(); 2024-05-13T19:59:10.457Z
-
-//   // record.repo = fullDID;
-//   // record.uri = fullDID + '/' + 'op.path';
-//   // record.action = 'create';
-
-//   records.parseTime = Date.now() - parseStart - pauseTime;
-//   yield records;
-
-//   return records;
-// }
 
 /**
  * @param {ArrayBuffer | Uint8Array} messageBuf
  * @param {string} did
- * @returns {Generator<import('./firehose').FirehoseRecord[] & { parseTime: number } | undefined>}
  */
-export function* sequenceReadCAR(messageBuf, did) {
+export function sequenceReadCAR(messageBuf, did) {
+  return sequenceReadCARCore(messageBuf, did, YIELD_AFTER_ITERATION);
+}
+
+/**
+ * @param {ArrayBuffer | Uint8Array} messageBuf
+ * @param {string} did
+ * @param {number} yieldAfterIteration
+ */
+function* sequenceReadCARCore(messageBuf, did, yieldAfterIteration) {
   if (typeof messageBuf === 'string')
     [messageBuf, did] = /** @type {[any, any]} */([did, messageBuf]);
 
   const parseStart = Date.now();
   let pauseTime = 0;
+
+  let batchParseStart = parseStart;
 
   const bytes = messageBuf instanceof ArrayBuffer ? new Uint8Array(messageBuf) : messageBuf;
 
@@ -162,10 +61,14 @@ export function* sequenceReadCAR(messageBuf, did) {
   let iteration = 0;
   for (const block of car.iterate()) {
     iteration++;
-    if (iteration % YIELD_AFTER_ITERATION === YIELD_AFTER_ITERATION - 1) {
+    if (iteration % yieldAfterIteration === yieldAfterIteration - 1) {
+      // parsing, but not yielding any records yet
       const pauseStart = Date.now();
-      yield;
-      pauseTime += Date.now() - pauseStart;
+      const emptyBatch = /** @type {never[] & { parseTime: number }} */([]);
+      emptyBatch.parseTime = pauseStart - batchParseStart;
+      yield emptyBatch;
+      batchParseStart = Date.now();
+      pauseTime += batchParseStart - pauseStart;
     }
 
     const record = decodeCBOR2(block.bytes);
@@ -176,10 +79,14 @@ export function* sequenceReadCAR(messageBuf, did) {
       let key = '';
       for (const sub of record.e) {
         iteration++;
-        if (iteration % YIELD_AFTER_ITERATION === YIELD_AFTER_ITERATION - 1) {
+        if (iteration % yieldAfterIteration === yieldAfterIteration - 1) {
+          // parsing, but not yielding any records yet
           const pauseStart = Date.now();
-          yield;
-          pauseTime += Date.now() - pauseStart;
+          const emptyBatch = /** @type {never[] & { parseTime: number }} */([]);
+          emptyBatch.parseTime = pauseStart - batchParseStart;
+          yield emptyBatch;
+          batchParseStart = Date.now();
+          pauseTime += batchParseStart - pauseStart;
         }
 
         if (!sub.k || !sub.v) continue;
@@ -211,16 +118,12 @@ export function* sequenceReadCAR(messageBuf, did) {
   }
 
   /** @type {import('./firehose').FirehoseRecord[] & { parseTime: number }} */
-  const records = /** @type {*} */([]);
-  for (const entry of recordsByCID) {
-    iteration++;
-    if (iteration % YIELD_AFTER_ITERATION === YIELD_AFTER_ITERATION - 1) {
-      const pauseStart = Date.now();
-      records.parseTime = pauseStart - parseStart - pauseTime;
-      yield;
-      pauseTime += Date.now() - pauseStart;
-    }
+  let batch = /** @type {*} */([]);
 
+  /** @type {import('./firehose').FirehoseRecord[] & { parseTime: number }} */
+  const all = /** @type {*} */([]);
+
+  for (const entry of recordsByCID) {
     const cid = entry[0];
     /** @type {import('./firehose').FirehoseRecord} */
     const record = entry[1];
@@ -233,7 +136,18 @@ export function* sequenceReadCAR(messageBuf, did) {
     }
 
     // let's recreate the record, to pack the GC and avoid deoptimized objects
-    records.push(record);
+    batch.push(record);
+    all.push(record);
+
+    iteration++;
+    if (iteration % yieldAfterIteration === yieldAfterIteration - 1) {
+      const pauseStart = Date.now();
+      batch.parseTime = pauseStart - batchParseStart;
+      yield batch;
+      batch = /** @type {*} */([]);
+      batchParseStart = Date.now();
+      pauseTime += batchParseStart - pauseStart;
+    }
   }
 
   // record.seq = commit.seq; 471603945
@@ -247,8 +161,11 @@ export function* sequenceReadCAR(messageBuf, did) {
   // record.uri = fullDID + '/' + 'op.path';
   // record.action = 'create';
 
-  records.parseTime = Date.now() - parseStart - pauseTime;
-  yield records;
-
-  return records;
+  const finish = Date.now();
+  if (batch.length) {
+    batch.parseTime = finish - batchParseStart;
+    yield batch;
+  }
+  all.parseTime = finish - parseStart - pauseTime;
+  return all;
 }

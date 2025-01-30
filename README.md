@@ -40,12 +40,73 @@ const records = readCAR(did, car);
 
 ## API details
 
+### firehose
 
+```TypeScript
+firehose(address = 'wss://bsky.network/xrpc/com.atproto.sync.subscribeRepos'):
+  AsyncIterable<FirehoseRecord[]>
+```
+
+Connects to a firehose via WebSocket (defaults to the central server https://bsky.network/
+or potentially a local server i.e. PDS if the address parameter is provided).
+
+Yields records in batches `FirehoseRecord[]`.
+
+Batching lets you consume records at your own speed. If you're iterating
+and immediatelly processing &mdash; they will come in batches of one.
+If your code stalls in process, they will queue up and next iteration will come
+with whole pile at once.
+
+Exiting the iterator loop disconnects from the WebSockets and discards any unprocessed records.
+
+```TypeScript
+firehose.each(address?): AsyncIterable<FirehoseRecord>
+```
+
+Same as the firehose() above, but always reporting records one by one.
+
+The queueing still happens behind the scene, but if your code stalls it will still
+receive each record separately. That comes with a small performance penalty.
+
+### readCAR
+
+```TypeScript
+readCAR(messageBuf: ArrayBuffer | Uint8Array, did: string): FirehoseRepositoryRecord[]
+```
+
+Parses binary CAR/DAG/CBOR format that is the archive/database format for BlueSky account history.
+
+The parser is pretty fast: 50Mb repository takes 1-2 seconds. However, for a web app that delay could be jarring. Enter sequenceReadCAR:
+
+```TypeScript
+sequenceReadCAR(messageBuf: ArrayBuffer | Uint8Array, did: string):
+  Iterable<FirehoseRepositoryRecord | undefined>
+```
+
+Parsing that binary, yielding the parsed records in implementation-defined batches.
+
+This lets your code parse CAR even on the main
+thread incrementally, without freezing the app.
+
+## Additional metadata on the records
+
+Apart from capturing the built-in BlueSky fields,
+both **firehose** and **readCAR** collect a couple extras:
+
+* **repo** the DID of the account making the record (post/like etc.)
+* **uri** standard `at://<did>/<type>/<hash>` way of referring to events in ATProto
+* **cid** another standard identifier, a bit longer and less useful
+* **action** mostly just `create` but can also be `delete` or `update` (think updating user profile)
+* **time** BlueSky-observed time (different from self-reported time that can be spoofed by a poster)
+* **receiveTimestamp** Unix-style time the message is received from WebSocket
+* **parseTime** useful for tracking performance, averages to 0.3 millisecond
 
 ## History and references
 
-The firehose functionality existed in [colds.ky](https://colds.ky) codebase for a while,
-using some of the packages referenced by the official [@atproto/api](https://www.npmjs.com/package/@atproto/api).
+The firehose functionality existed in
+[colds.ky](https://colds.ky) codebase for a while,
+using some of the packages referenced by the official
+[@atproto/api](https://www.npmjs.com/package/@atproto/api):
 
 * [@ipld/car](https://github.com/ipld/js-car) - Apache 2.0 and MIT
 * [cbor-x](https://github.dev/kriszyp/cbor-x) - MIT
@@ -58,8 +119,9 @@ But those are complex and broader-purpose libraries.
 Later [@mary.my.id](https://bsky.app/profile/mary.my.id) created leaner,
 more focused set of libraries to transcode some of the same formats, [@atcute/*](https://github.com/mary-ext/atcute) - MIT license.
 
-And now this library here is taking in only few necessary bits, focusing on singular use case:
-parsing realtime firehose, and account repository CAR.
+And now this library here is taking in only few necessary bits,
+focusing on singular use case: parsing realtime firehose,
+and account repository CAR.
 
 # License and links
 
