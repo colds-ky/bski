@@ -38,6 +38,10 @@ const records = readCAR(did, car);
 
 [ ![Example using bski to fetch CAR snapshot file and parse it](example-car.png) ](https://tty.wtf/%23+BSki+reading+CAR+snapshot//See+@bsky.app+likes,+tweets,+follows+etc.//%60%60%60JavaScript/import+%7B+readCAR+%7D+from+'bski';//const+did+=+'did:plc:z72i7hdynmk6r22z27h6tvur';/const+car+=+await+fetch('https:%2F%2Fpuffball.us-east.host.bsky.network%2Fxrpc%2Fcom.atproto.sync.getRepo%3Fdid='+%2B+did)/++.then(x+=%3E+x.arrayBuffer());//const+records+=+readCAR(did,+car);//%60%60%60//)
 
+## API details
+
+
+
 ## History and references
 
 The firehose functionality existed in [colds.ky](https://colds.ky) codebase for a while,

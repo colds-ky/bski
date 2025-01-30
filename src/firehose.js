@@ -362,8 +362,12 @@ export async function* firehose(address) {
 
 }
 
-async function* each() {
-  for await (const block of firehose()) {
+/**
+ * @param {string} [address]
+ * @returns {AsyncGenerator<FirehoseRecord, void, void>}
+ */
+async function* each(address) {
+  for await (const block of firehose(address)) {
     yield* block;
   }
 }
