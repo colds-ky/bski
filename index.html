@@ -7,7 +7,7 @@
 </head>
 <body>
  
-<script src="index.js"></script>
+<script src="index.cjs"></script>
 <script type="module">
 (async () => {
   const totals = document.createElement('h4');
@@ -44,27 +44,27 @@
 
   async function downloadCAR(handle, did, pds) {
 
-  const parsedSubtitle = document.createElement('blockquote');
-  document.body.insertBefore(parsedSubtitle, totals.nextElementSibling);
-  parsedSubtitle.textContent = 'Fetching @' + handle + ' CAR...';
+    const parsedSubtitle = document.createElement('blockquote');
+    document.body.insertBefore(parsedSubtitle, totals.nextElementSibling);
+    parsedSubtitle.textContent = 'Fetching @' + handle + ' CAR...';
 
-  const data = await fetch(pds +  '/xrpc/com.atproto.sync.getRepo?did=' +did).then(x=>x.arrayBuffer());
+    const data = await fetch(pds + '/xrpc/com.atproto.sync.getRepo?did=' + did).then(x => x.arrayBuffer());
 
-  parsedSubtitle.textContent= 'Fetched @' + handle + ' CAR[' + data.byteLength.toLocaleString() + '], parsing...';
-  const startParsing = Date.now();
-  const parsed = bski.readCAR(data, bskyAppDID);
-  const parseTime = Date.now() - startParsing;
+    parsedSubtitle.textContent = 'Fetched @' + handle + ' CAR[' + data.byteLength.toLocaleString() + '], parsing...';
+    const startParsing = Date.now();
+    const parsed = bski.readCAR(data, bskyAppDID);
+    const parseTime = Date.now() - startParsing;
 
-  parsedSubtitle.textContent =
-    'Fetched @' + handle + ' CAR[' + data.byteLength.toLocaleString() + 'b],' +
-    ' parsed ' + parsed.length.toLocaleString() +
-    ' in ' + parseTime.toLocaleString() + 'ms';
+    parsedSubtitle.textContent =
+      'Fetched @' + handle + ' CAR[' + data.byteLength.toLocaleString() + 'b],' +
+      ' parsed ' + parsed.length.toLocaleString() +
+      ' in ' + parseTime.toLocaleString() + 'ms';
 
-  const samplePre = document.createElement('pre');
-  samplePre.style.fontSize = '80%';
-  samplePre.textContent =
-    JSON.stringify(parsed[0], null, 2) + '\n...\n' +
-    JSON.stringify(parsed[parsed.length - 1], null, 2);
+    const samplePre = document.createElement('pre');
+    samplePre.style.fontSize = '80%';
+    samplePre.textContent =
+      JSON.stringify(parsed[0], null, 2) + '\n...\n' +
+      JSON.stringify(parsed[parsed.length - 1], null, 2);
 
     parsedSubtitle.appendChild(samplePre);
   }

@@ -1,12 +1,12 @@
 // @ts-check
 /// <reference types='@atproto/api' />
 
-import { readCar } from './decode/car/reader';
-import { fromBytes } from './decode/cbor/bytes';
-import { toCIDLink } from './decode/cbor/cid-link';
-import { decode, decodeFirst } from './decode/cbor/decode';
+import { readCar } from './src/decode/car/reader';
+import { fromBytes } from './src/decode/cbor/bytes';
+import { toCIDLink } from './src/decode/cbor/cid-link';
+import { decode, decodeFirst } from './src/decode/cbor/decode';
 
-import { version } from '../package.json';
+import { version } from './package.json';
 export { version };
 
 const emptyUint8Array = new Uint8Array();

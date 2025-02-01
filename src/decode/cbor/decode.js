@@ -63,7 +63,31 @@ const readCid = (state, length) => {
   const slice = state.b.subarray(state.p + 1, (state.p += length));
   return toCIDLink(slice);
 };
+
+/**
+ * @typedef {{
+ *  b: Uint8Array;
+ *  v: DataView;
+ *  p: number;
+ * }} State
+ */
+
+var nestLevel;
+/** @param {State} state */
 const readValue = (state) => {
+  nestLevel = (nestLevel || 0) + 1;
+  if (nestLevel > 20) {
+    debugger;
+  }
+  try {
+    return readValueWorker(state);
+  } finally {
+    nestLevel--;
+  }
+};
+
+/** @param {State} state */
+const readValueWorker = (state) => {
   const prelude = readUint8(state);
   const type = prelude >> 5;
   const info = prelude & 0x1f;

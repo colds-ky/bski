@@ -4,10 +4,10 @@
 // import { decode as decodeCID } from './decode/js-multiformats/cid';
 // import { CarBufferReader } from './decode/js-car/buffer-reader-browser';
 
-import { readCar } from './decode/car/reader';
-import { decode as decodeCBOR2 } from './decode/cbor/decode';
-import { decode as decodeCID2 } from './decode/cbor/cid';
-import { toBase32 } from './decode/multibase/base32';
+import { readCar } from './src/decode/car/reader';
+import { decode as decodeCBOR2 } from './src/decode/cbor/decode';
+import { decode as decodeCID2 } from './src/decode/cbor/cid';
+import { toBase32 } from './src/decode/multibase/base32';
 
 const YIELD_AFTER_ITERATION = 300;
 
