@@ -124,7 +124,9 @@
       "alt": "A video demonstrating the new video feed feature in Bluesky",
       "$type": "app.bsky.embed.video",
       "video": {
-        "ref": "bafkreidda33y6agfdeougm6qfu2oejammaaocmy42pdz3eeeuwpzst3m2u",
+        "ref": {
+          "$link": "bafkreidda33y6agfdeougm6qfu2oejammaaocmy42pdz3eeeuwpzst3m2u"
+        },
         "size": 2102930,
         "$type": "blob",
         "mimeType": "video/mp4"
@@ -288,7 +290,9 @@
     "did": "did:web:discover.bsky.app",
     "$type": "app.bsky.feed.generator",
     "avatar": {
-      "ref": "bafkreicrnrylrdlwja5rsku7763xw6o2bjopkhvl3rubpaf4t54lkss2ja",
+      "ref": {
+        "$link": "bafkreicrnrylrdlwja5rsku7763xw6o2bjopkhvl3rubpaf4t54lkss2ja"
+      },
       "size": 1822,
       "$type": "blob",
       "mimeType": "image/png"
@@ -323,7 +327,9 @@
         {
           "alt": "A screenshot of the mobile version of Bluesky. The \"Discover\" feed is active, and at the top there is a \"Trending\" section. It shows \"New Orleans Attack\", \"Meghan Markle\", and \"Meta Leadership\"",
           "image": {
-            "ref": "bafkreiblzvfqwaixdxtud6ubeilb4yyc6zdfsmfinfh4lpojik2tql7gwa",
+            "ref": {
+              "$link": "bafkreiblzvfqwaixdxtud6ubeilb4yyc6zdfsmfinfh4lpojik2tql7gwa"
+            },
             "size": 928464,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -374,7 +380,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/12-30-2024-year-in-review",
         "thumb": {
-          "ref": "bafkreihfopfehac5mqhji5iaa2qvm6cgj66a3ty2j65xiitn3wq4at5gp4",
+          "ref": {
+            "$link": "bafkreihfopfehac5mqhji5iaa2qvm6cgj66a3ty2j65xiitn3wq4at5gp4"
+          },
           "size": 795093,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -401,7 +409,9 @@
         {
           "alt": "To find Trending Topics, click the magnifying glass icon on the bottom bar of your app or the right sidebar on desktop.",
           "image": {
-            "ref": "bafkreihzashq3eg3nlfnf37ueygckumoo5qxybg4xjbohdrxllhatsgj2a",
+            "ref": {
+              "$link": "bafkreihzashq3eg3nlfnf37ueygckumoo5qxybg4xjbohdrxllhatsgj2a"
+            },
             "size": 208581,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -441,7 +451,9 @@
         {
           "alt": "Screenshot of trending topics launched on Christmas 2025. Topics trending include: Virat Kohli, Red Panda, Porzingis, Post Malone, Beyoncé, Gavin and Stacey Finale, Sixers, A Complete Unknown, King Henry, Joel Embiid, Pentatonix",
           "image": {
-            "ref": "bafkreihqlw3meip62eo7vhaxhsy5rssgrmwbqx6o7e7nynnqrxjdo7lojy",
+            "ref": {
+              "$link": "bafkreihqlw3meip62eo7vhaxhsy5rssgrmwbqx6o7e7nynnqrxjdo7lojy"
+            },
             "size": 220189,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -483,7 +495,9 @@
         {
           "alt": "*A screenshot of a post by Bluesky. On the top right, a “settings” button has been pressed and a menu is showing. The menu items include:*\n\n*Show replies as Linear or Threaded*\n\n*Reply sorting: hot, oldest, newest, most-liked, and random*",
           "image": {
-            "ref": "bafkreicxgi4zmhzp4ngs7ogivl5igdxlpgon36endk3w5rmkf5czbosx5e",
+            "ref": {
+              "$link": "bafkreicxgi4zmhzp4ngs7ogivl5igdxlpgon36endk3w5rmkf5czbosx5e"
+            },
             "size": 451440,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -545,7 +559,9 @@
         {
           "alt": "The Notifications page now has a Mentions tab.",
           "image": {
-            "ref": "bafkreihi25bi6z5yofh55gdqspmqlrclizdrz5csfckyk7ynxqhgb6yu64",
+            "ref": {
+              "$link": "bafkreihi25bi6z5yofh55gdqspmqlrclizdrz5csfckyk7ynxqhgb6yu64"
+            },
             "size": 47191,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -584,7 +600,9 @@
       "external": {
         "uri": "https://bsky.social",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -669,7 +687,9 @@
         {
           "alt": "Bluesky 1.96. Improvements: New \"Mentions\" tab in notifications. Usernames on .bsky.social are now reserved when you switch to your own domain. New button to change reply ordering and visual style in threads. Visual improvements to the app. New translations: Nepali, Khmer, and Romanian.",
           "image": {
-            "ref": "bafkreig7azhkpvvwz2cpew7lz3wn7uajkaempz5kuspyhevog674u266aa",
+            "ref": {
+              "$link": "bafkreig7azhkpvvwz2cpew7lz3wn7uajkaempz5kuspyhevog674u266aa"
+            },
             "size": 248496,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -693,13 +713,17 @@
   {
     "$type": "app.bsky.actor.profile",
     "avatar": {
-      "ref": "bafkreihagr2cmvl2jt4mgx3sppwe2it3fwolkrbtjrhcnwjk4jdijhsoze",
+      "ref": {
+        "$link": "bafkreihagr2cmvl2jt4mgx3sppwe2it3fwolkrbtjrhcnwjk4jdijhsoze"
+      },
       "size": 33790,
       "$type": "blob",
       "mimeType": "image/jpeg"
     },
     "banner": {
-      "ref": "bafkreichzyovokfzmymz36p5jibbjrhsur6n7hjnzxrpbt5jaydp2szvna",
+      "ref": {
+        "$link": "bafkreichzyovokfzmymz36p5jibbjrhsur6n7hjnzxrpbt5jaydp2szvna"
+      },
       "size": 58042,
       "$type": "blob",
       "mimeType": "image/jpeg"
@@ -769,7 +793,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/12-03-2024-altmetric",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -820,7 +846,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/11-29-2024-engagement",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -903,7 +931,9 @@
         {
           "alt": "Bluesky 1.95. Improvements: New reply sorting option: \"hotness.\" Improved localizations. Smoother feed scrolling. You can now swipe away informational \"toasts\". Fixes: Camera photos no longer get stretched. Newlines no longer get dropped on copypaste. Lots of other bug fixes and performance improvements.",
           "image": {
-            "ref": "bafkreihtvjeekiz3glr55vfm6g2ty7xg7u4t2zgudryv2fxwiuefpnjk3i",
+            "ref": {
+              "$link": "bafkreihtvjeekiz3glr55vfm6g2ty7xg7u4t2zgudryv2fxwiuefpnjk3i"
+            },
             "size": 259135,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -933,7 +963,9 @@
         {
           "alt": "In the Settings screen, select “Content and media”",
           "image": {
-            "ref": "bafkreidchllrhs3rcroeqt77xcvexvk33uuijxlrh3hxbcdh4isv3clt5y",
+            "ref": {
+              "$link": "bafkreidchllrhs3rcroeqt77xcvexvk33uuijxlrh3hxbcdh4isv3clt5y"
+            },
             "size": 88585,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -946,7 +978,9 @@
         {
           "alt": "Next, select “Thread preferences”",
           "image": {
-            "ref": "bafkreifvr6p32gefqboizrjtmzr6r66bv3hfrmxutvf3plt4pxy6z4plue",
+            "ref": {
+              "$link": "bafkreifvr6p32gefqboizrjtmzr6r66bv3hfrmxutvf3plt4pxy6z4plue"
+            },
             "size": 89432,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -959,7 +993,9 @@
         {
           "alt": "You can still sort replies by recency, popularity, and randomly (“poster’s roulette”).",
           "image": {
-            "ref": "bafkreiepzvl4xvnsu5hpnw7w3acuqig5lsspphjawnsewgqz3ue3fsey4u",
+            "ref": {
+              "$link": "bafkreiepzvl4xvnsu5hpnw7w3acuqig5lsspphjawnsewgqz3ue3fsey4u"
+            },
             "size": 165872,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -1182,7 +1218,9 @@
       "external": {
         "uri": "https://www.twitch.tv/blueskysocial",
         "thumb": {
-          "ref": "bafkreihh7dthuxfqel6zwcmxapcu47tr34rat7thjtxlfmrwidvxfsmqne",
+          "ref": {
+            "$link": "bafkreihh7dthuxfqel6zwcmxapcu47tr34rat7thjtxlfmrwidvxfsmqne"
+          },
           "size": 384236,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -1249,7 +1287,9 @@
       "external": {
         "uri": "https://www.reddit.com/r/BlueskySocial/comments/1gyfram/hi_were_members_of_the_bluesky_team_ama/",
         "thumb": {
-          "ref": "bafkreif7k7seyf57dt4xdfafmznvprjxlt74p3majuf3tdxldnxzy6q3hq",
+          "ref": {
+            "$link": "bafkreif7k7seyf57dt4xdfafmznvprjxlt74p3majuf3tdxldnxzy6q3hq"
+          },
           "size": 451349,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -1285,7 +1325,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/4-28-2023-domain-handle-tutorial",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -1438,7 +1480,9 @@
         {
           "alt": "A screenshot of a bluesky post by Durial321. The post says “Dw guys, I just checked and Falador is safe, no need to bank your items.” The post has a notice that says “Archived from 5 June 2006 at 19:44”. The post date is “11 November 2024 at 20:46”",
           "image": {
-            "ref": "bafkreidqcz4q5xwhnxiyhtazsvuovql3mlm6lx23pwrpls6wl2imxp77am",
+            "ref": {
+              "$link": "bafkreidqcz4q5xwhnxiyhtazsvuovql3mlm6lx23pwrpls6wl2imxp77am"
+            },
             "size": 116685,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -1451,7 +1495,9 @@
         {
           "alt": "A screenshot of the UI which shows if you press the archival notice. “Archived post. This post claims to have been created at 5 June 2006 at 19:44, but was first seen by Bluesky at 11 November 2024 at 20:46. Bluesky cannot confirm the authenticity of the claimed date. Okay”",
           "image": {
-            "ref": "bafkreigdbvb77zpovpsqofvhl7gsbff5fdo5z7agra2v42cpobauavzkq4",
+            "ref": {
+              "$link": "bafkreigdbvb77zpovpsqofvhl7gsbff5fdo5z7agra2v42cpobauavzkq4"
+            },
             "size": 138121,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -1489,7 +1535,9 @@
       "alt": "A video overview of the new settings page",
       "$type": "app.bsky.embed.video",
       "video": {
-        "ref": "bafkreifgd7k5jqcmuvwefwaxq7mbu4xh3uketvhoqfgbc26phje4oa2tni",
+        "ref": {
+          "$link": "bafkreifgd7k5jqcmuvwefwaxq7mbu4xh3uketvhoqfgbc26phje4oa2tni"
+        },
         "size": 1104970,
         "$type": "blob",
         "mimeType": "video/mp4"
@@ -1527,7 +1575,9 @@
         {
           "alt": "Bluesky 1.94. Improvements: Redesigned settings screen. New animations when viewing images. Imported images now clearly indicate that they were imported. Fixes: Lots of performance improvements!",
           "image": {
-            "ref": "bafkreic3nytc3ndqy7qbvt7tierpwtzihges537nuctrhfr37stc2avinq",
+            "ref": {
+              "$link": "bafkreic3nytc3ndqy7qbvt7tierpwtzihges537nuctrhfr37stc2avinq"
+            },
             "size": 194138,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -1581,7 +1631,9 @@
         {
           "alt": "Kris Jenner looking at a computer",
           "image": {
-            "ref": "bafkreiddd7cus33yyfwxcjrzk77ka3zldjzt22wbvoimduwn2viuf2qdtq",
+            "ref": {
+              "$link": "bafkreiddd7cus33yyfwxcjrzk77ka3zldjzt22wbvoimduwn2viuf2qdtq"
+            },
             "size": 232606,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -1727,7 +1779,9 @@
       "external": {
         "uri": "https://bsky.social/about/support",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -1775,7 +1829,9 @@
       "external": {
         "uri": "https://www.twitch.tv/blueskysocial",
         "thumb": {
-          "ref": "bafkreihh7dthuxfqel6zwcmxapcu47tr34rat7thjtxlfmrwidvxfsmqne",
+          "ref": {
+            "$link": "bafkreihh7dthuxfqel6zwcmxapcu47tr34rat7thjtxlfmrwidvxfsmqne"
+          },
           "size": 384236,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -1840,7 +1896,9 @@
       "alt": "Barbie smiling, clapping, and jumping up and down",
       "$type": "app.bsky.embed.video",
       "video": {
-        "ref": "bafkreic5qzdlpdt6gqakxzx27lsp6phmltk2fv6bpyfleoumo4nxytvleq",
+        "ref": {
+          "$link": "bafkreic5qzdlpdt6gqakxzx27lsp6phmltk2fv6bpyfleoumo4nxytvleq"
+        },
         "size": 1787532,
         "$type": "blob",
         "mimeType": "video/mp4"
@@ -1868,7 +1926,9 @@
         {
           "alt": "Megamind saying \"1 million in a day?\"",
           "image": {
-            "ref": "bafkreiaesqjzqbko4ehee43awptpadwyxh56o6er473kggwfv3ca24rq2u",
+            "ref": {
+              "$link": "bafkreiaesqjzqbko4ehee43awptpadwyxh56o6er473kggwfv3ca24rq2u"
+            },
             "size": 119206,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -1934,7 +1994,9 @@
         {
           "alt": "Hide the Pain Harold sitting in front of a laptop with a mug",
           "image": {
-            "ref": "bafkreihmhodeja2xede46jq5vpjdb7i5p7vxjc4o4ef7dzzt3p2b56haeu",
+            "ref": {
+              "$link": "bafkreihmhodeja2xede46jq5vpjdb7i5p7vxjc4o4ef7dzzt3p2b56haeu"
+            },
             "size": 238939,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -1963,7 +2025,9 @@
       "external": {
         "uri": "https://www.twitch.tv/blueskysocial",
         "thumb": {
-          "ref": "bafkreihh7dthuxfqel6zwcmxapcu47tr34rat7thjtxlfmrwidvxfsmqne",
+          "ref": {
+            "$link": "bafkreihh7dthuxfqel6zwcmxapcu47tr34rat7thjtxlfmrwidvxfsmqne"
+          },
           "size": 384236,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -2104,7 +2168,9 @@
       "external": {
         "uri": "https://www.youtube.com/watch?v=gp1MR2WAAXY",
         "thumb": {
-          "ref": "bafkreifgxpfyr3xyulpm2qxx7hwtovzxlvnqablbgsi7rgyg2vkmipdewu",
+          "ref": {
+            "$link": "bafkreifgxpfyr3xyulpm2qxx7hwtovzxlvnqablbgsi7rgyg2vkmipdewu"
+          },
           "size": 731250,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -2131,7 +2197,9 @@
         {
           "alt": "a duck pointing to itself",
           "image": {
-            "ref": "bafkreifk2bimhbzym3cpmv7xrqedubyhmjzsimlcz2r22ydhymmclg74ei",
+            "ref": {
+              "$link": "bafkreifk2bimhbzym3cpmv7xrqedubyhmjzsimlcz2r22ydhymmclg74ei"
+            },
             "size": 30966,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -2202,7 +2270,9 @@
         {
           "alt": "Bluesky Social as the #1 free app in the App Store rankings",
           "image": {
-            "ref": "bafkreie5ef5gh5ipclajha7pjekbwl6767uflhot67i7zxoqo2uu4mjf7u",
+            "ref": {
+              "$link": "bafkreie5ef5gh5ipclajha7pjekbwl6767uflhot67i7zxoqo2uu4mjf7u"
+            },
             "size": 326113,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -2259,7 +2329,9 @@
       "alt": "An actress standing up at an awards ceremony",
       "$type": "app.bsky.embed.video",
       "video": {
-        "ref": "bafkreifdwmjnl7ociaajrfu4tkbble3cx5z3y4ma4q67ohptagnozmkqhi",
+        "ref": {
+          "$link": "bafkreifdwmjnl7ociaajrfu4tkbble3cx5z3y4ma4q67ohptagnozmkqhi"
+        },
         "size": 576816,
         "$type": "blob",
         "mimeType": "video/mp4"
@@ -2309,7 +2381,9 @@
         {
           "alt": "A screenshot of the composer interface. The first post says “After you type something, you’ll see the plus appear below…”. The second post says “…and you can type your next post!”",
           "image": {
-            "ref": "bafkreiadvzmd3xdgovsvtm6d253zpyhx2jvqab5hob6unjhdesag35ku64",
+            "ref": {
+              "$link": "bafkreiadvzmd3xdgovsvtm6d253zpyhx2jvqab5hob6unjhdesag35ku64"
+            },
             "size": 142402,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -2371,7 +2445,9 @@
         {
           "alt": "Bluesky 1.93. Improvements: You can now compose threads with multiple posts. Easier-to-understand tools for self-labeling posts (eg nsfw). You can now label your post with a \"Graphic Media\" label. Visual improvements to link cards, images, and other interfaces. Fixes: Fixed an issue which \"squished\" images. Fixes to video playback.",
           "image": {
-            "ref": "bafkreib2ibqpr5orloyfp6id4z4rkg7uehdibcdo7bukgpomwfwsht6isy",
+            "ref": {
+              "$link": "bafkreib2ibqpr5orloyfp6id4z4rkg7uehdibcdo7bukgpomwfwsht6isy"
+            },
             "size": 243453,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -2401,7 +2477,9 @@
         {
           "alt": "A screenshot of the post composer with an image of a dog wearing boots added to the post. The “Labels” button is highlighted in pink. A pink arrow points to the content warning screen which will open when the “Labels” button is pressed.",
           "image": {
-            "ref": "bafkreihahgpoiup3m2kznk4ycka26o4lb4asyq4frd745hzqlnnitdj2uq",
+            "ref": {
+              "$link": "bafkreihahgpoiup3m2kznk4ycka26o4lb4asyq4frd745hzqlnnitdj2uq"
+            },
             "size": 253695,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -2440,7 +2518,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/10-24-2024-series-a",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -2476,7 +2556,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/10-24-2024-series-a",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -2512,7 +2594,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/10-24-2024-series-a",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -2548,7 +2632,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/10-24-2024-series-a",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -2599,7 +2685,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/10-24-2024-series-a",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -2702,7 +2790,9 @@
       "external": {
         "uri": "https://github.com/bluesky-social/social-app",
         "thumb": {
-          "ref": "bafkreibwgp6lcx3pr54k753b3vdwseqhg5ptg5d4vwugkcgh5f6kr3zzua",
+          "ref": {
+            "$link": "bafkreibwgp6lcx3pr54k753b3vdwseqhg5ptg5d4vwugkcgh5f6kr3zzua"
+          },
           "size": 285191,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -2777,7 +2867,9 @@
       "external": {
         "uri": "https://chromewebstore.google.com/detail/sky-follower-bridge/behhbpbpmailcnfbjagknjngnfdojpko?pli=1",
         "thumb": {
-          "ref": "bafkreicyeko5dbu6cs2rqie6va2o5vdnmqf76ha2ahgfq7ty3jsgg4n4zy",
+          "ref": {
+            "$link": "bafkreicyeko5dbu6cs2rqie6va2o5vdnmqf76ha2ahgfq7ty3jsgg4n4zy"
+          },
           "size": 540376,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -2976,7 +3068,9 @@
         {
           "alt": "Bluesky 1.92.1. Improvements: Increased the letter spacing of the \"System\" font. Search now defaults to all languages. Improved the feed reordering tool. Larger tap targets for avatars in the feed. Can now post gifs without text. Fixed sharing videos to Bluesky from the camera roll. The 'N' shortcut should now work again on Web. Fixed an issue which caused layout shifts on Web when opening menus",
           "image": {
-            "ref": "bafkreigo742bcj52m4ipoyfl73tr5ygsfsja7pnqagv37tzbnvx2i2e7pi",
+            "ref": {
+              "$link": "bafkreigo742bcj52m4ipoyfl73tr5ygsfsja7pnqagv37tzbnvx2i2e7pi"
+            },
             "size": 310035,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -3028,7 +3122,9 @@
         {
           "alt": "A screenshot of the search interface with English selected as the language.",
           "image": {
-            "ref": "bafkreibidzdbket2cxesqalxdfh3ngbgppsvvdjszqvhx7bhpqf3ou5wke",
+            "ref": {
+              "$link": "bafkreibidzdbket2cxesqalxdfh3ngbgppsvvdjszqvhx7bhpqf3ou5wke"
+            },
             "size": 141602,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -3068,7 +3164,9 @@
         {
           "alt": "A screenshot of the Appearance settings screen. Color mode: system, light, dark. Dark theme: dim, dark. Font: System, Theme. (For the best experience, we recommend using the theme font.) Font size: smaller, default, larger.",
           "image": {
-            "ref": "bafkreifbs6s3pi62nbxmowdgmpalolymcexc2mbxlxmnaanidybhzpt2xu",
+            "ref": {
+              "$link": "bafkreifbs6s3pi62nbxmowdgmpalolymcexc2mbxlxmnaanidybhzpt2xu"
+            },
             "size": 198532,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -3108,7 +3206,9 @@
         {
           "alt": "A screenshot of a post by bsky.app with the post menu open and “Pin to your profile” highlighted",
           "image": {
-            "ref": "bafkreifdy2tn272suipoxjrwaqkaxplrhiwqvdpa4lymgglgqmun6zsgx4",
+            "ref": {
+              "$link": "bafkreifdy2tn272suipoxjrwaqkaxplrhiwqvdpa4lymgglgqmun6zsgx4"
+            },
             "size": 336612,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -3121,7 +3221,9 @@
         {
           "alt": "A screenshot of the bsky.app profile with the post pinned to the top of the profile.",
           "image": {
-            "ref": "bafkreicvexdgo5va4r4rzhgzxdhcqkdnmhdtb7t5lhmyfzs7ce2k2rhcxa",
+            "ref": {
+              "$link": "bafkreicvexdgo5va4r4rzhgzxdhcqkdnmhdtb7t5lhmyfzs7ce2k2rhcxa"
+            },
             "size": 658582,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -3161,7 +3263,9 @@
         {
           "alt": "Bluesky 1.92. Improvements: Pinned posts! Multiple look & feel improvements, including new animations. New appearance options: theme font & text size. Search now includes a language-filtering tool. You can now “Share” vdieos to Bluesky from your camera roll. You can now swipe to delete an active chat conversation. Changed: Mutewords now apply to notifications and search.",
           "image": {
-            "ref": "bafkreietc6usi75dr4ffv6spqyo7lzmpyjjaunuksjhfa4a4t6mf5i2ih4",
+            "ref": {
+              "$link": "bafkreietc6usi75dr4ffv6spqyo7lzmpyjjaunuksjhfa4a4t6mf5i2ih4"
+            },
             "size": 269622,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -3268,7 +3372,9 @@
         {
           "alt": "Bluesky's 10M announcement card. This account was user #17,181.",
           "image": {
-            "ref": "bafkreichktvechc3wdgry6bcorrrzquknn6rwpu2e4uggsuflt6jjkaiha",
+            "ref": {
+              "$link": "bafkreichktvechc3wdgry6bcorrrzquknn6rwpu2e4uggsuflt6jjkaiha"
+            },
             "size": 510891,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -3320,7 +3426,9 @@
         {
           "alt": "Bluesky 1.91.1. Improvements:\n\n- Improvements to the video player performance\n- Video mute/unmute now persists between videos\n- Improved image cropping behaviors to show more of the images in the feed\n- Fix to email verification requirements for self-hosted users",
           "image": {
-            "ref": "bafkreibdcauit6jucixvvwhgd6a3futlwzjb6jrjrwdk6otb6hhpoddvwy",
+            "ref": {
+              "$link": "bafkreibdcauit6jucixvvwhgd6a3futlwzjb6jrjrwdk6otb6hhpoddvwy"
+            },
             "size": 206243,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -3350,7 +3458,9 @@
         {
           "alt": "10 million!",
           "image": {
-            "ref": "bafkreiekiwtndeluym7ixy2xmvbm4ntxeucqlpoc7u5xa2jr4t62kxnw5i",
+            "ref": {
+              "$link": "bafkreiekiwtndeluym7ixy2xmvbm4ntxeucqlpoc7u5xa2jr4t62kxnw5i"
+            },
             "size": 357691,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -3435,7 +3545,9 @@
       "alt": "Debbie Ryan giving an interview. \"I want to make history. And that's what this is.\"",
       "$type": "app.bsky.embed.video",
       "video": {
-        "ref": "bafkreif2firztfyxoz6krysgmtzhlf5f66e5ettp5rdzbav3zmlzcfk66q",
+        "ref": {
+          "$link": "bafkreif2firztfyxoz6krysgmtzhlf5f66e5ettp5rdzbav3zmlzcfk66q"
+        },
         "size": 772495,
         "$type": "blob",
         "mimeType": "video/mp4"
@@ -3508,7 +3620,9 @@
         {
           "alt": "Posting and watching a video in Bluesky",
           "image": {
-            "ref": "bafkreihzpxty43nuwvwmswky5zup4afri6eorphh2mxkwgfv4vdtfn7fee",
+            "ref": {
+              "$link": "bafkreihzpxty43nuwvwmswky5zup4afri6eorphh2mxkwgfv4vdtfn7fee"
+            },
             "size": 835130,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -3546,7 +3660,9 @@
       "alt": "Bluesky video feature announcement",
       "$type": "app.bsky.embed.video",
       "video": {
-        "ref": "bafkreih7qpo7ef7hhtm7ehi7paimlieddrn5argpq4eayz6teez2qbsr7m",
+        "ref": {
+          "$link": "bafkreih7qpo7ef7hhtm7ehi7paimlieddrn5argpq4eayz6teez2qbsr7m"
+        },
         "size": 6688967,
         "$type": "blob",
         "mimeType": "video/mp4"
@@ -3554,7 +3670,9 @@
       "captions": [
         {
           "file": {
-            "ref": "bafkreidmznutyb2nxfndhw7czz6vngeljt6rua7hiih7tj4prsthtsqb2a",
+            "ref": {
+              "$link": "bafkreidmznutyb2nxfndhw7czz6vngeljt6rua7hiih7tj4prsthtsqb2a"
+            },
             "size": 139,
             "$type": "blob",
             "mimeType": "text/vtt"
@@ -3902,7 +4020,9 @@
         {
           "alt": "A stick figure wearing a hat standing in a door frame. Caption above: \"Are ya winning, son?\" Child stick figure sitting at a computer with Bluesky open. Caption: \"yes\"",
           "image": {
-            "ref": "bafkreiephn7le674doropxzsgmb3urn4oyhqqpow6dotkwm5x6thxft7da",
+            "ref": {
+              "$link": "bafkreiephn7le674doropxzsgmb3urn4oyhqqpow6dotkwm5x6thxft7da"
+            },
             "size": 86759,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -3933,7 +4053,9 @@
         {
           "alt": "Chef Carmy from \"The Bear\" cooking in the kitchen. He is yelling.",
           "image": {
-            "ref": "bafkreib5jpw7fr4ebcdxgpig3ej4jc4d64sp46olw6gg465bmi4q7qwyqm",
+            "ref": {
+              "$link": "bafkreib5jpw7fr4ebcdxgpig3ej4jc4d64sp46olw6gg465bmi4q7qwyqm"
+            },
             "size": 895740,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -3963,7 +4085,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/09-04-2024-welcome",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -3999,7 +4123,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/09-04-2024-bem-vindos",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -4104,7 +4230,9 @@
         {
           "alt": "Ice Spice's Genius interview, where she says: Everyone was trying to be like \"Oh, she a one-hit wonder,\" da da da.... now what? Two-hit wonder?\"\n\nNo entrevista da Genius, Ice Spice diz: Todo mundo estava tentando dizer: 'Ah, ela é uma artista de um sucesso só', blá blá blá... e agora? Duas músicas de sucesso?",
           "image": {
-            "ref": "bafkreigfjxdq34fe67uqfeby47gvavt3qvrn73jugvwpsil7n3evbwinby",
+            "ref": {
+              "$link": "bafkreigfjxdq34fe67uqfeby47gvavt3qvrn73jugvwpsil7n3evbwinby"
+            },
             "size": 597318,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -4117,7 +4245,9 @@
         {
           "alt": "Ice Spice's Genius interview, where she says: Everyone was trying to be like \"Oh, she a one-hit wonder,\" da da da.... now what? Two-hit wonder?\"\n\nNo entrevista da Genius, Ice Spice diz: Todo mundo estava tentando dizer: 'Ah, ela é uma artista de um sucesso só', blá blá blá... e agora? Duas músicas de sucesso?",
           "image": {
-            "ref": "bafkreie6ou6g5dbwlxfg5cfs26yqvnu4bm557zbcffurta34yrzpdwyh5q",
+            "ref": {
+              "$link": "bafkreie6ou6g5dbwlxfg5cfs26yqvnu4bm557zbcffurta34yrzpdwyh5q"
+            },
             "size": 567461,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -4171,7 +4301,9 @@
         {
           "alt": "Miranda Cosgrove's character looking at a computer screen. O personagem de Miranda Cosgrove olhando para uma tela de computador.",
           "image": {
-            "ref": "bafkreibltypqorcjck3s7vgdmskrtfloukyypfst7yaupd4uofnaik3ply",
+            "ref": {
+              "$link": "bafkreibltypqorcjck3s7vgdmskrtfloukyypfst7yaupd4uofnaik3ply"
+            },
             "size": 187680,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -4248,7 +4380,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/04-10-2024-user-faq-br",
         "thumb": {
-          "ref": "bafkreifb3nrcefwnbfronfwnghe73exdpppdzhodkxxjd5ak57ts2cjate",
+          "ref": {
+            "$link": "bafkreifb3nrcefwnbfronfwnghe73exdpppdzhodkxxjd5ak57ts2cjate"
+          },
           "size": 96151,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -4296,7 +4430,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/08-29-2024-pacotes-iniciais",
         "thumb": {
-          "ref": "bafkreidmioesbux4gtlgld7w2igsdxbuamfvk2qbv77l5ysuoi4qsed52q",
+          "ref": {
+            "$link": "bafkreidmioesbux4gtlgld7w2igsdxbuamfvk2qbv77l5ysuoi4qsed52q"
+          },
           "size": 260105,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -4414,7 +4550,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/08-28-2024-anti-toxicity-features",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -4509,7 +4647,9 @@
         {
           "alt": "A before and after screenshot of a thread in the following feed, now showing the full context of the latest reply.",
           "image": {
-            "ref": "bafkreihni7nzwfi3iixevixbndapvggx4qbljlyhjlagpn5rbnvwn4lr5e",
+            "ref": {
+              "$link": "bafkreihni7nzwfi3iixevixbndapvggx4qbljlyhjlagpn5rbnvwn4lr5e"
+            },
             "size": 349153,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -4571,7 +4711,9 @@
         {
           "alt": "A screenshot of a reply. The “Hide reply for everyone” menu item is highlighted.",
           "image": {
-            "ref": "bafkreidpjdpreorrxbgzurlknyaz5rzw7rdey6vx6fuorgabkaaesekda4",
+            "ref": {
+              "$link": "bafkreidpjdpreorrxbgzurlknyaz5rzw7rdey6vx6fuorgabkaaesekda4"
+            },
             "size": 382723,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -4611,7 +4753,9 @@
         {
           "alt": "A screenshot of the post composer with an arrow pointing at “Anybody can interact.” A screenshot of a post with an arrow pointing at “Everybody can reply”. A screenshot of the post interaction settings with the “Quote posts enabled” setting toggled on.",
           "image": {
-            "ref": "bafkreiabmzbf4e7mqelbu7xk5ig3ukznrdopgzo2536vc677sfwwvr6x3m",
+            "ref": {
+              "$link": "bafkreiabmzbf4e7mqelbu7xk5ig3ukznrdopgzo2536vc677sfwwvr6x3m"
+            },
             "size": 429781,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -4651,7 +4795,9 @@
         {
           "alt": "A screenshot of a quote post. The “Detach quote” menu item is highlighted. An arrow shows the post after the quote was detached, showing now “Content not available.”",
           "image": {
-            "ref": "bafkreiglyomfuxni6pyqivo4qk47j6trnehfpfgjcwo46lvxcqxvjndoba",
+            "ref": {
+              "$link": "bafkreiglyomfuxni6pyqivo4qk47j6trnehfpfgjcwo46lvxcqxvjndoba"
+            },
             "size": 480371,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -4691,7 +4837,9 @@
         {
           "alt": "A screenshot of a post showing 1 quote, and a screenshot of a listing of the quotes.",
           "image": {
-            "ref": "bafkreibsh6aftvsr4lt64s3n4verfeq2ryiuxjyyizqdlkb3qvijmeyd6u",
+            "ref": {
+              "$link": "bafkreibsh6aftvsr4lt64s3n4verfeq2ryiuxjyyizqdlkb3qvijmeyd6u"
+            },
             "size": 470537,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -4731,7 +4879,9 @@
         {
           "alt": "Bluesky 1.90. New: list quotes on a post. New: New self-moderation tools. “Detach” quote posts. Control who can quote. Hide a reply. New: Timed mute words. Changed: Tuned the visibility of replies in Following.",
           "image": {
-            "ref": "bafkreihsyzvkpsdzjsnocdktvm43sv2e7scjjotfk5nsly7srhr4d4ishm",
+            "ref": {
+              "$link": "bafkreihsyzvkpsdzjsnocdktvm43sv2e7scjjotfk5nsly7srhr4d4ishm"
+            },
             "size": 375834,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -4797,7 +4947,9 @@
         {
           "alt": "Screenshot of a graph of user counts across X, Threads, and Bluesky, found in a news article. Bluesky's column is short (but powerful!).",
           "image": {
-            "ref": "bafkreic5aj3sntcgixn7t7sbv4beymleb2uxxag54lrsknpzrzclhs2duq",
+            "ref": {
+              "$link": "bafkreic5aj3sntcgixn7t7sbv4beymleb2uxxag54lrsknpzrzclhs2duq"
+            },
             "size": 77594,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -4827,7 +4979,9 @@
         {
           "alt": "A chart showing activity from various countries on Bluesky. The UK, in blue, is experiencing a huge spike.",
           "image": {
-            "ref": "bafkreiccrjgd6xpdv77mm74ae4h2acpc2hqo6tjkvfmzel4iatw4bvorqy",
+            "ref": {
+              "$link": "bafkreiccrjgd6xpdv77mm74ae4h2acpc2hqo6tjkvfmzel4iatw4bvorqy"
+            },
             "size": 198799,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -5037,7 +5191,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/08-06-2024-board",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -5106,7 +5262,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/07-30-2024-schedule-and-crosspost-with-buffer",
         "thumb": {
-          "ref": "bafkreic65smck6audn4rxexxnllxz2wzs355w2tqzyrcwatifulsqh2hw4",
+          "ref": {
+            "$link": "bafkreic65smck6audn4rxexxnllxz2wzs355w2tqzyrcwatifulsqh2hw4"
+          },
           "size": 226643,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -5156,7 +5314,9 @@
       "external": {
         "uri": "https://buffer.com/bluesky",
         "thumb": {
-          "ref": "bafkreicl3vy7x5sutoxwa7iqdg2cytbspvl6l6dmrp7cpawrahj4qkw5na",
+          "ref": {
+            "$link": "bafkreicl3vy7x5sutoxwa7iqdg2cytbspvl6l6dmrp7cpawrahj4qkw5na"
+          },
           "size": 794833,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -5241,7 +5401,9 @@
         {
           "alt": "A screenshot of the Notifications screen. A blue arrow is pointed at the cog icon on the right. That arrow is labeled \"Notification Settings.\"",
           "image": {
-            "ref": "bafkreifpkrlotvf22igedckqkqnttmpbytodxrjpftgemdjymaypq6qioy",
+            "ref": {
+              "$link": "bafkreifpkrlotvf22igedckqkqnttmpbytodxrjpftgemdjymaypq6qioy"
+            },
             "size": 271159,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -5254,7 +5416,9 @@
         {
           "alt": "A screenshot of the notification settings.\n\nNotification filters: Enable priority notifications\n\nExperimental: When this preference is enabled, you'll only receive reply and quote notifications from users you follow. We'll continue to add more controls here over time.",
           "image": {
-            "ref": "bafkreigdck7otwn66ifky4z6gxmj2mtewvrfi7rkdbcsgtg6ii3dn676ce",
+            "ref": {
+              "$link": "bafkreigdck7otwn66ifky4z6gxmj2mtewvrfi7rkdbcsgtg6ii3dn676ce"
+            },
             "size": 444389,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -5384,7 +5548,9 @@
         {
           "alt": "A screenshot of the Accessibility Settings menu. Under the Alt text heading, there are two switches. The first says Require alt text before posting. The second says Display larger alt text badges. Under the Media heading, there is one switch. It says disable autoplay for GIFs.",
           "image": {
-            "ref": "bafkreid3ua3wbgqbcrwfmazcaso4in5hxwf7izvhxbvl7s7xrmrphtj44m",
+            "ref": {
+              "$link": "bafkreid3ua3wbgqbcrwfmazcaso4in5hxwf7izvhxbvl7s7xrmrphtj44m"
+            },
             "size": 292059,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -5424,7 +5590,9 @@
         {
           "alt": "A screenshot of a post by Paul Frazee that says I love cats! The cursor is hovered over a UI element that says “Everybody can reply” and which has a blue edit icon indicating it can be changed.",
           "image": {
-            "ref": "bafkreibho6pwyt43gurjbjucij4xolaitcsa6jiw4fcjza4i3ze5zi4gyy",
+            "ref": {
+              "$link": "bafkreibho6pwyt43gurjbjucij4xolaitcsa6jiw4fcjza4i3ze5zi4gyy"
+            },
             "size": 774537,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -5437,7 +5605,9 @@
         {
           "alt": "A screenshot of a popup titled “Choose who can reply”. The instructions say Either choose Everybody or Nobody and has two large buttons for Everybody and Nobody. Everybody is selected. Under that, additional instructions say “Or combine these options:” and then there are two buttons for Mentioned users and Followed users.",
           "image": {
-            "ref": "bafkreigetaikeofevvw5ik6dnhx25bcty4rnlgtwxqyuv7siug2scqbeya",
+            "ref": {
+              "$link": "bafkreigetaikeofevvw5ik6dnhx25bcty4rnlgtwxqyuv7siug2scqbeya"
+            },
             "size": 345250,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -5495,7 +5665,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/06-26-2024-starter-packs",
         "thumb": {
-          "ref": "bafkreidmioesbux4gtlgld7w2igsdxbuamfvk2qbv77l5ysuoi4qsed52q",
+          "ref": {
+            "$link": "bafkreidmioesbux4gtlgld7w2igsdxbuamfvk2qbv77l5ysuoi4qsed52q"
+          },
           "size": 260105,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -5546,7 +5718,9 @@
         {
           "alt": "A starter pack titled \"Bluesky for Journalists\"",
           "image": {
-            "ref": "bafkreias7ni2xuu4egwjasqqfaq4lvibpeiu5p7xmqu5o7kvcxk3z4r7mu",
+            "ref": {
+              "$link": "bafkreias7ni2xuu4egwjasqqfaq4lvibpeiu5p7xmqu5o7kvcxk3z4r7mu"
+            },
             "size": 589685,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -5600,7 +5774,9 @@
         {
           "alt": "Starter Packs profile tab. It reads: “You haven’t created a starter pack yet! Starter packs let you easily share your favorite feeds and people with your friends.” There are two buttons: Make one for me, and Create.",
           "image": {
-            "ref": "bafkreidqrwfhzksn37y3wt5psooa4y3awhlo32wwvm5jeptinkfigatxoy",
+            "ref": {
+              "$link": "bafkreidqrwfhzksn37y3wt5psooa4y3awhlo32wwvm5jeptinkfigatxoy"
+            },
             "size": 491120,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -5640,7 +5816,9 @@
         {
           "alt": "An image of 7 profile pictures. The top reads: “Join the conversation.” The bottom reads: “Bluesky Starter Packs”",
           "image": {
-            "ref": "bafkreicblzvpiqpv3plbf3pxtgdc7cogcyu5ycdyzf3vqdwpqocztekhmq",
+            "ref": {
+              "$link": "bafkreicblzvpiqpv3plbf3pxtgdc7cogcyu5ycdyzf3vqdwpqocztekhmq"
+            },
             "size": 697653,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -6212,7 +6390,9 @@
         {
           "alt": "A screenshot of the top of the Home screen. A # icon is now on the top right.",
           "image": {
-            "ref": "bafkreifzugsatcbxziakuanr7frhyyop45lmxgk2putxfnlfzwprjw2rly",
+            "ref": {
+              "$link": "bafkreifzugsatcbxziakuanr7frhyyop45lmxgk2putxfnlfzwprjw2rly"
+            },
             "size": 116904,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -6252,7 +6432,9 @@
         {
           "alt": "A screenshot of a thread by Joshua J. Friedman showing the “Continue thread…” interface.",
           "image": {
-            "ref": "bafkreib7rfhfwlvmxh5prqqv2qgw6phjqjtu5son35tcfel7cfyxldhk5a",
+            "ref": {
+              "$link": "bafkreib7rfhfwlvmxh5prqqv2qgw6phjqjtu5son35tcfel7cfyxldhk5a"
+            },
             "size": 601252,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -6292,7 +6474,9 @@
         {
           "alt": "A screenshot of the Bluesky profile with the new “Followed by…” interface. Bluesky @bsky.app 1,130,365 followers 2 following 308 posts. Official Bluesky Account (check domain) Follow for updates and announcements. Followed by Yoel Roth, Casey Newton, and 286 others.",
           "image": {
-            "ref": "bafkreifaxnuokwrv4644sobgvycjkdqytsifmvm2kry5a7jb225j6kb4zu",
+            "ref": {
+              "$link": "bafkreifaxnuokwrv4644sobgvycjkdqytsifmvm2kry5a7jb225j6kb4zu"
+            },
             "size": 953269,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -6435,7 +6619,9 @@
         {
           "alt": "The post menu for a post by Andrea Grimes that says \"accidentally intercepted an ambient thought\"\n\nThe post menu includes Translate, Copy post text, Send via direct message, and Share",
           "image": {
-            "ref": "bafkreid25qxp64bs2n5ntuaoybo5d5kdt5oet2ubylya66ilyvgcagnoeu",
+            "ref": {
+              "$link": "bafkreid25qxp64bs2n5ntuaoybo5d5kdt5oet2ubylya66ilyvgcagnoeu"
+            },
             "size": 533854,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -6448,7 +6634,9 @@
         {
           "alt": "The chat interface showing a message being composed. The linked post is visible above the input. The input has \"Cat\" typed into it",
           "image": {
-            "ref": "bafkreib3bfk5fqo6qreyrvql4r4epqufjekgl2pq3z35wxafkumwsnvh3e",
+            "ref": {
+              "$link": "bafkreib3bfk5fqo6qreyrvql4r4epqufjekgl2pq3z35wxafkumwsnvh3e"
+            },
             "size": 516759,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -6461,7 +6649,9 @@
         {
           "alt": "The sent message show Andrea Grimes' post and the message \"Cat\"",
           "image": {
-            "ref": "bafkreiazovxlcksxpuck2lgv542hydo5adrz6gnifu3ip3jx3mqzet3s7i",
+            "ref": {
+              "$link": "bafkreiazovxlcksxpuck2lgv542hydo5adrz6gnifu3ip3jx3mqzet3s7i"
+            },
             "size": 326750,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -6501,7 +6691,9 @@
         {
           "alt": "Deactivate account\nYour profile, posts, feeds, and lists will no longer be visible to other Bluesky users. You can reactivate your account at any time by logging in.\n\nThere is no time limit for account deactivation, come back any time. If you're trying to change your handle or email, do so before you deactivate.\n\nCancel or Yes, deactivate",
           "image": {
-            "ref": "bafkreih6uo3ru6q54ps2ealma6x7hxfmd7bdg2yo3f2fyt7gihalb5hm5y",
+            "ref": {
+              "$link": "bafkreih6uo3ru6q54ps2ealma6x7hxfmd7bdg2yo3f2fyt7gihalb5hm5y"
+            },
             "size": 467890,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -6541,7 +6733,9 @@
         {
           "alt": "A post by Shreyan (@shreyanjain.net)\nThe post has two labels. One is a keyboard, another says \"Changed Handle\"\nThe post says \"We are so back\"\nJun 3, 2024 at 12:07pm\n9 likes, 2 replies\n\nA reply by \"Seth relaxed\" that says \"I'm glad to hear it as someone who's recently back myself\"",
           "image": {
-            "ref": "bafkreigdeamzbhigapvm65et2sir2yk5p2rt7kzuaqkafaj72jmmldazou",
+            "ref": {
+              "$link": "bafkreigdeamzbhigapvm65et2sir2yk5p2rt7kzuaqkafaj72jmmldazou"
+            },
             "size": 534638,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -6592,7 +6786,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/05-31-2024-search",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -6641,7 +6837,9 @@
         {
           "alt": "A screenshot of the App Password creation interface. It now includes a checkbox that's labeled \"Allow access to your direct messages\"\n\nPlease enter a unique name for this App Password or use our randomly generated one.\nA text input with: \"DarkSlateBlue\"\nCan only contain letters, numbers, spaces, dashes, and underscores. Must be at least 4 characters long, but no more than 32 characters long.\nAllow access to your direct messages\nCreate App Password",
           "image": {
-            "ref": "bafkreidu3hjdhevubb4lhox26vnzp6d454jwrvnkuahwrk5ever353cufm",
+            "ref": {
+              "$link": "bafkreidu3hjdhevubb4lhox26vnzp6d454jwrvnkuahwrk5ever353cufm"
+            },
             "size": 604509,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -6696,7 +6894,9 @@
         {
           "alt": "A screenshot of a thread. At the bottom of the thread, there is a single \"Show hidden replies\" card which has grouped together all of the labeled or muted replies.\n\nThe posts:\nBrian Clevinger, bclev.bsky.social, Wow!\nkatagatame_, kata.codes, amazing hawk. amazing shots.\nSusan, oldandtired.bsky.social, So envious, such amazing birds.\nAn icon of an eye with a slash through it, Show hidden replies",
           "image": {
-            "ref": "bafkreice2anjpgoylvv3qdm4twvsncoewozgiy3ktd2lihwdomwb4qc5iu",
+            "ref": {
+              "$link": "bafkreice2anjpgoylvv3qdm4twvsncoewozgiy3ktd2lihwdomwb4qc5iu"
+            },
             "size": 582578,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -6736,7 +6936,9 @@
         {
           "alt": "A screenshot of a post by Paul Frazee showing 4 images of a cat in a grid. The \"ALT\" indicator is moved from the bottom left to the bottom right, and is now smaller. The post says:\n\nPaul \"Frazee\" pfrazee.com 14 minutes ago\nThe latest in cat entertainment technology (a piece of twine)",
           "image": {
-            "ref": "bafkreigv7zhkq4pyhv2wt7gpk3er7db2zinuxw2o64tnew7lidevrdpkou",
+            "ref": {
+              "$link": "bafkreigv7zhkq4pyhv2wt7gpk3er7db2zinuxw2o64tnew7lidevrdpkou"
+            },
             "size": 563568,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -6809,7 +7011,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/05-22-2024-direct-messages",
         "thumb": {
-          "ref": "bafkreicg7pxz6ny45ngwfowqu4o22qdu2pifiwhhha5vx4wntmfm6hxfx4",
+          "ref": {
+            "$link": "bafkreicg7pxz6ny45ngwfowqu4o22qdu2pifiwhhha5vx4wntmfm6hxfx4"
+          },
           "size": 163502,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -6846,7 +7050,9 @@
         {
           "alt": "A screenshot of Bluesky's DM interface. The first message reads \"Bluesky has direct messages now!\" and the second message reads \"Start chatting!\"",
           "image": {
-            "ref": "bafkreig4ckpkkx6odg5nbdde43nq3lzgn5lszrdexj2wgtrwmocyw7lw24",
+            "ref": {
+              "$link": "bafkreig4ckpkkx6odg5nbdde43nq3lzgn5lszrdexj2wgtrwmocyw7lw24"
+            },
             "size": 111242,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -6944,7 +7150,9 @@
         {
           "alt": "Screenshot of the post composer in the Bluesky app. At the bottom, a module says “Everybody can reply.” Use this to change your reply settings.",
           "image": {
-            "ref": "bafkreib3kjpgi7hsaagooeox6b5b4luxir5vxlxzseor3cktgake36q644",
+            "ref": {
+              "$link": "bafkreib3kjpgi7hsaagooeox6b5b4luxir5vxlxzseor3cktgake36q644"
+            },
             "size": 180212,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -6983,7 +7191,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/05-22-2024-direct-messages",
         "thumb": {
-          "ref": "bafkreicg7pxz6ny45ngwfowqu4o22qdu2pifiwhhha5vx4wntmfm6hxfx4",
+          "ref": {
+            "$link": "bafkreicg7pxz6ny45ngwfowqu4o22qdu2pifiwhhha5vx4wntmfm6hxfx4"
+          },
           "size": 163502,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -7020,7 +7230,9 @@
         {
           "alt": "Screenshot of the DM interface in the Bluesky app. One message says “heyyy,” formatted in a blue bubble. The response is the monkey covering eyes emoji in a gray bubble.",
           "image": {
-            "ref": "bafkreifi5snrkxhpvfj7a7vqxbzoldtmdvrngenkqwqi5j3boxtkepwj54",
+            "ref": {
+              "$link": "bafkreifi5snrkxhpvfj7a7vqxbzoldtmdvrngenkqwqi5j3boxtkepwj54"
+            },
             "size": 97489,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -7079,7 +7291,9 @@
       "external": {
         "uri": "https://www.youtube.com/watch?v=KofJNIUv00A",
         "thumb": {
-          "ref": "bafkreicvrem5yyliddtx7sg5gnncunrnxxqx2b7eqe3rowlpzdiiyw6pji",
+          "ref": {
+            "$link": "bafkreicvrem5yyliddtx7sg5gnncunrnxxqx2b7eqe3rowlpzdiiyw6pji"
+          },
           "size": 278778,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -7105,7 +7319,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/05-07-2024-product-roadmap",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -7141,7 +7357,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/05-07-2024-product-roadmap",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -7177,7 +7395,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/05-07-2024-product-roadmap",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -7248,7 +7468,9 @@
         {
           "alt": "A screenshot of Bluesky's \"Add ALT text\" tool\n\nAdd ALT text\nA gif that says HAPPY THURSDAY good morning hope the day goes well\nDescriptive alt text\nGood morning GIF\nSave",
           "image": {
-            "ref": "bafkreibxosid7ic6lb3nz7jvkqqgtizruznjwey3vfzoqwj6vn7op2go2q",
+            "ref": {
+              "$link": "bafkreibxosid7ic6lb3nz7jvkqqgtizruznjwey3vfzoqwj6vn7op2go2q"
+            },
             "size": 653120,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -7261,7 +7483,9 @@
         {
           "alt": "A screenshot of the post menu. This is available on posts in the Discover feed.\n\nIt has highlighted: Show more like this, Show less like this",
           "image": {
-            "ref": "bafkreiaz2t4k2sntpbirjs7ggnfvfuvlogkffpj776lrltfoamxgn53oiy",
+            "ref": {
+              "$link": "bafkreiaz2t4k2sntpbirjs7ggnfvfuvlogkffpj776lrltfoamxgn53oiy"
+            },
             "size": 357038,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -7290,7 +7514,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/05-07-2024-product-roadmap",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -7364,7 +7590,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/03-12-2024-stackable-moderation",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -7449,7 +7677,9 @@
         {
           "alt": "Bluesky's login page with a cute version of the logo. It has a blue butterly, \"Bluesky\" in a fun font, the like button and repost button, and Japanese characters under it.",
           "image": {
-            "ref": "bafkreigbo254zhv5qakkupocruyqyxuq22wc5d7la236rlyjgo4yljvlne",
+            "ref": {
+              "$link": "bafkreigbo254zhv5qakkupocruyqyxuq22wc5d7la236rlyjgo4yljvlne"
+            },
             "size": 205715,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -7572,7 +7802,9 @@
         {
           "alt": "A screenshot of the Bluesky interface. The settings page now shows \"Moderation\" under the \"Basics\" section.",
           "image": {
-            "ref": "bafkreiak6vee4ut7jooncqpalqqwemtk3eylby4l3mpgw65yvysizb3hw4",
+            "ref": {
+              "$link": "bafkreiak6vee4ut7jooncqpalqqwemtk3eylby4l3mpgw65yvysizb3hw4"
+            },
             "size": 421324,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -7601,7 +7833,9 @@
       "external": {
         "uri": "https://media.tenor.com/gznLWsJjaMAAAAAC/daytime-miving.gif?hh=263&ww=498",
         "thumb": {
-          "ref": "bafkreic6kucjyapr222ccxt7tapescuuryu34melke7j5im4pk4bfywmyy",
+          "ref": {
+            "$link": "bafkreic6kucjyapr222ccxt7tapescuuryu34melke7j5im4pk4bfywmyy"
+          },
           "size": 767508,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -7651,7 +7885,9 @@
       "external": {
         "uri": "https://media.tenor.com/4IkfSV_2jxQAAAAC/sky-sun.gif?hh=498&ww=298",
         "thumb": {
-          "ref": "bafkreicf7qm2mesttsejcvcqrnoixxxp7g5okv4guliywzgmuczofrc6si",
+          "ref": {
+            "$link": "bafkreicf7qm2mesttsejcvcqrnoixxxp7g5okv4guliywzgmuczofrc6si"
+          },
           "size": 225441,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -7701,7 +7937,9 @@
       "external": {
         "uri": "https://media.tenor.com/3GgX9XG4fe0AAAAC/blue-fly.gif?hh=280&ww=498",
         "thumb": {
-          "ref": "bafkreicea3uup6borfazb2hacixr7silkoawjax72r5vb5a4qdw7zi5kxe",
+          "ref": {
+            "$link": "bafkreicea3uup6borfazb2hacixr7silkoawjax72r5vb5a4qdw7zi5kxe"
+          },
           "size": 228259,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -7786,7 +8024,9 @@
         {
           "alt": "A screenshot of the search screen with \"mets\" as the query\n\nThree tabs: Top, Latest, People. Top is selected.\n\nFirst result by Coach Rusty\nI feel like if you knowingly invite a Mets fan into your home you only have yourself to blame about whatever happens next\n\nSecond result by Michael Frasca\nTIL that NY 'Mets' is short form \"Metropolitans\" and NY Yankeses is short for 'Yankees Suck.'\nA Tip o' the Hat to @rubenbolling.bsky.social!",
           "image": {
-            "ref": "bafkreif3pwe67pcnsf3cjieuwgt5llbnqzigapmuxr3lkadxkljqap3mia",
+            "ref": {
+              "$link": "bafkreif3pwe67pcnsf3cjieuwgt5llbnqzigapmuxr3lkadxkljqap3mia"
+            },
             "size": 535153,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -7826,7 +8066,9 @@
         {
           "alt": "A screenshot of the settings page\nChange handle\nTwo-factor authentication\nA toggle: Require email code to log into your account\nAccount\nChange password",
           "image": {
-            "ref": "bafkreicvfdq7jwqiozrprxslh6iva5brnisjk32qry7aag5cbissh4rgam",
+            "ref": {
+              "$link": "bafkreicvfdq7jwqiozrprxslh6iva5brnisjk32qry7aag5cbissh4rgam"
+            },
             "size": 238492,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -7839,7 +8081,9 @@
         {
           "alt": "A screenshot of the login screen\nHosting provider\nBluesky social\nAccount\nThe username and password have been covered\n2FA confirmation\nAn input asking for the confirmation code\nIt is labeled \"Check your email for a login code and enter it here.\"",
           "image": {
-            "ref": "bafkreig6f6gkektmfbincvpx2w6pfhvbws6a7gadv5nvvza2yp27dygtcy",
+            "ref": {
+              "$link": "bafkreig6f6gkektmfbincvpx2w6pfhvbws6a7gadv5nvvza2yp27dygtcy"
+            },
             "size": 324013,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -7879,7 +8123,9 @@
         {
           "alt": "A screenshot of the composer with the GIF button circled and the label \"Add GIF\"",
           "image": {
-            "ref": "bafkreifr7jds7mfgsak52t3a3gnmi46mrpmnmrn5gory2axbxx4hirbpka",
+            "ref": {
+              "$link": "bafkreifr7jds7mfgsak52t3a3gnmi46mrpmnmrn5gory2axbxx4hirbpka"
+            },
             "size": 216225,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -7892,7 +8138,9 @@
         {
           "alt": "A screenshot of the gif search interface",
           "image": {
-            "ref": "bafkreiaw35yj4ppvxzxaqw7idv63vu54ng5vy57ao6kagqu3qomsl6he5u",
+            "ref": {
+              "$link": "bafkreiaw35yj4ppvxzxaqw7idv63vu54ng5vy57ao6kagqu3qomsl6he5u"
+            },
             "size": 299003,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -7917,7 +8165,9 @@
     "did": "did:web:discover.bsky.app",
     "$type": "app.bsky.feed.generator",
     "avatar": {
-      "ref": "bafkreigk26dzfyeyvpjadajzhdorm4hkj2vaypwtwwgxlt74dscitomfse",
+      "ref": {
+        "$link": "bafkreigk26dzfyeyvpjadajzhdorm4hkj2vaypwtwwgxlt74dscitomfse"
+      },
       "size": 10519,
       "$type": "blob",
       "mimeType": "image/png"
@@ -7934,7 +8184,9 @@
     "did": "did:web:discover.bsky.app",
     "$type": "app.bsky.feed.generator",
     "avatar": {
-      "ref": "bafkreibvatgwb3ea47nz5xrsyixyhmdzdrrnhjtn6rai7vcpzrh6nmxygq",
+      "ref": {
+        "$link": "bafkreibvatgwb3ea47nz5xrsyixyhmdzdrrnhjtn6rai7vcpzrh6nmxygq"
+      },
       "size": 12856,
       "$type": "blob",
       "mimeType": "image/png"
@@ -7951,7 +8203,9 @@
     "did": "did:web:discover.bsky.app",
     "$type": "app.bsky.feed.generator",
     "avatar": {
-      "ref": "bafkreig7giif65hcs667s2afjdhc4so4koh733jlc5ol4l7jz4nxovtg6u",
+      "ref": {
+        "$link": "bafkreig7giif65hcs667s2afjdhc4so4koh733jlc5ol4l7jz4nxovtg6u"
+      },
       "size": 8274,
       "$type": "blob",
       "mimeType": "image/png"
@@ -7968,7 +8222,9 @@
     "did": "did:web:discover.bsky.app",
     "$type": "app.bsky.feed.generator",
     "avatar": {
-      "ref": "bafkreidljdg62x3zhlweyzshoekrw2znokytt5tmib7g4xsngwvpnf6ule",
+      "ref": {
+        "$link": "bafkreidljdg62x3zhlweyzshoekrw2znokytt5tmib7g4xsngwvpnf6ule"
+      },
       "size": 9049,
       "$type": "blob",
       "mimeType": "image/png"
@@ -7985,7 +8241,9 @@
     "did": "did:web:discover.bsky.app",
     "$type": "app.bsky.feed.generator",
     "avatar": {
-      "ref": "bafkreieppnjpayqgjbyqnbeqzwj3pzqtiwbe5a4m6whzqnp3k7gpqs2gai",
+      "ref": {
+        "$link": "bafkreieppnjpayqgjbyqnbeqzwj3pzqtiwbe5a4m6whzqnp3k7gpqs2gai"
+      },
       "size": 6374,
       "$type": "blob",
       "mimeType": "image/png"
@@ -8002,7 +8260,9 @@
     "did": "did:web:discover.bsky.app",
     "$type": "app.bsky.feed.generator",
     "avatar": {
-      "ref": "bafkreidztvxbbdkakiarsshcwk6ctcagovwjd6fnxxeixwytfnlq3nbl6i",
+      "ref": {
+        "$link": "bafkreidztvxbbdkakiarsshcwk6ctcagovwjd6fnxxeixwytfnlq3nbl6i"
+      },
       "size": 8393,
       "$type": "blob",
       "mimeType": "image/png"
@@ -8023,7 +8283,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/press-faq",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -8063,7 +8325,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/post-embeds-guide",
         "thumb": {
-          "ref": "bafkreigc2us7zhxsit6offrcgqvlrkpbnejz5tkmycam7ngnpii5zjoy4u",
+          "ref": {
+            "$link": "bafkreigc2us7zhxsit6offrcgqvlrkpbnejz5tkmycam7ngnpii5zjoy4u"
+          },
           "size": 199232,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -8168,7 +8432,9 @@
         {
           "alt": "A screenshot of a post by jay.bsky.team. The dropdown is open, and the \"Embed post\" option is highlighted.",
           "image": {
-            "ref": "bafkreihq5xh34jowc5yixbw2fd76nb2cr7rhtohjkmcxw6ppehjdppczce",
+            "ref": {
+              "$link": "bafkreihq5xh34jowc5yixbw2fd76nb2cr7rhtohjkmcxw6ppehjdppczce"
+            },
             "size": 842914,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -8208,7 +8474,9 @@
         {
           "alt": "A screenshot of Bluesky's web app. The hover card for jay.bsky.team is displayed. It includes her profile pic, a following button, and her bio.",
           "image": {
-            "ref": "bafkreietdja2qy4clxluh6l76725mt4hd4nor5z3hguk3aquboo6ukxs6y",
+            "ref": {
+              "$link": "bafkreietdja2qy4clxluh6l76725mt4hd4nor5z3hguk3aquboo6ukxs6y"
+            },
             "size": 687343,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -8248,7 +8516,9 @@
         {
           "alt": "A screenshot of jay.bsky.team's profile. Her bio section is higlighted. The screenshot says \"Scrolls correctly now!\"",
           "image": {
-            "ref": "bafkreidrdeq3b745hczjpq76z2aqhr563oz2d4yh3hvowedf4anbfrqpcq",
+            "ref": {
+              "$link": "bafkreidrdeq3b745hczjpq76z2aqhr563oz2d4yh3hvowedf4anbfrqpcq"
+            },
             "size": 917280,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -8288,7 +8558,9 @@
         {
           "alt": "A screenshot of the Bluesky settings page. Under \"Advanced,\" the option to \"Disable haptics\" is highlighted",
           "image": {
-            "ref": "bafkreic3pm63dv4ciqfwl6nwmxv4gbv2mlumamlsibybgv2nd7t725v4va",
+            "ref": {
+              "$link": "bafkreic3pm63dv4ciqfwl6nwmxv4gbv2mlumamlsibybgv2nd7t725v4va"
+            },
             "size": 298122,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -8412,7 +8684,9 @@
         {
           "alt": "Screenshot of the post embed interface available at embed.bsky.app. There is an input field for the post URL, and an arrow that points to how the embed appears.",
           "image": {
-            "ref": "bafkreiazh3nvedkdyiz76jnmzzid3gukitchr6fee7czggxbno4uxqpgr4",
+            "ref": {
+              "$link": "bafkreiazh3nvedkdyiz76jnmzzid3gukitchr6fee7czggxbno4uxqpgr4"
+            },
             "size": 224686,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -8491,7 +8765,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/04-10-2024-user-faq-br",
         "thumb": {
-          "ref": "bafkreibmmpwets4yzpqjyewrvrr6wkfbswtvrknhbse5wa2zkkzuqhcetq",
+          "ref": {
+            "$link": "bafkreibmmpwets4yzpqjyewrvrr6wkfbswtvrknhbse5wa2zkkzuqhcetq"
+          },
           "size": 100627,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -8731,7 +9007,9 @@
         {
           "alt": "An image of Bluesky Shorts",
           "image": {
-            "ref": "bafkreihvs567yabgxcn4p7mjnzo4oxkb4ugajt7ju2papos2h4upcpqdke",
+            "ref": {
+              "$link": "bafkreihvs567yabgxcn4p7mjnzo4oxkb4ugajt7ju2papos2h4upcpqdke"
+            },
             "size": 328136,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -8818,7 +9096,9 @@
       "external": {
         "uri": "https://youtu.be/GOvbRTWOI4g?feature=shared",
         "thumb": {
-          "ref": "bafkreidyc5ikta3pgsarvl53npqaehysagpv5dwowgm3jwwrz6m6cgv5w4",
+          "ref": {
+            "$link": "bafkreidyc5ikta3pgsarvl53npqaehysagpv5dwowgm3jwwrz6m6cgv5w4"
+          },
           "size": 437194,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -8887,7 +9167,9 @@
       "external": {
         "uri": "https://github.com/bluesky-social/ozone/",
         "thumb": {
-          "ref": "bafkreidv6a7boszn75yzqv6a3wqgvjbcv72us3iq7k7r5cm5e22sokstwq",
+          "ref": {
+            "$link": "bafkreidv6a7boszn75yzqv6a3wqgvjbcv72us3iq7k7r5cm5e22sokstwq"
+          },
           "size": 262901,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -8937,7 +9219,9 @@
       "external": {
         "uri": "https://www.youtube.com/watch?v=GOvbRTWOI4g",
         "thumb": {
-          "ref": "bafkreibq5hgx2urxusrpfnyyeulpzx23bwp7d3hnuzfhefhpx2ml7pj7i4",
+          "ref": {
+            "$link": "bafkreibq5hgx2urxusrpfnyyeulpzx23bwp7d3hnuzfhefhpx2ml7pj7i4"
+          },
           "size": 447030,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -9000,7 +9284,9 @@
         {
           "alt": "A screenshot of the bluesky post menu\n\nTranslate\nCopy post text\nShare\nMute thread\nMute words & tags\nHide post\nReport post",
           "image": {
-            "ref": "bafkreicor2ubcdhfajj6ubzaen5mvtwhwqxdth5nhs4nrgsdlrxdqxqdqq",
+            "ref": {
+              "$link": "bafkreicor2ubcdhfajj6ubzaen5mvtwhwqxdth5nhs4nrgsdlrxdqxqdqq"
+            },
             "size": 165560,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -9098,7 +9384,9 @@
         {
           "alt": "#cats\nToby @tobytwistycat.bsky.social 1 hour ago\nSo #WhiskersWednesday has come around again! #cats #cats of bluesky\n\nTwo pictures of cats",
           "image": {
-            "ref": "bafkreiaorhyotvgsnkaezr535xtwnmzieagskivktc6oax7tp6yzl7mgqq",
+            "ref": {
+              "$link": "bafkreiaorhyotvgsnkaezr535xtwnmzieagskivktc6oax7tp6yzl7mgqq"
+            },
             "size": 687891,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -9172,7 +9460,9 @@
         {
           "alt": "A screenshot of the desktop home screen\n\nFollowing\nDiscover\nQuiet Posters\nPostes\nCatch Up\nFor You",
           "image": {
-            "ref": "bafkreibews63xzjh2uidfsbotzqjiwg5d4zvddcaf3khgn7ttuikisbaq4",
+            "ref": {
+              "$link": "bafkreibews63xzjh2uidfsbotzqjiwg5d4zvddcaf3khgn7ttuikisbaq4"
+            },
             "size": 141741,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -9212,7 +9502,9 @@
         {
           "alt": "A screenshot of the mobile share menu with Bluesky as an option",
           "image": {
-            "ref": "bafkreidsxpti4kse2nkunkyr5krfaovape4bi7iy4kwyxzvzt6tzbmntnu",
+            "ref": {
+              "$link": "bafkreidsxpti4kse2nkunkyr5krfaovape4bi7iy4kwyxzvzt6tzbmntnu"
+            },
             "size": 317579,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -9252,7 +9544,9 @@
         {
           "alt": "A screenshot of the Bluesky side menu\n\nSearch\nHome\nNotifications\nFeeds\nLists\nModeration\nProfile\nSettings\n\nA red arrow is pointed at Moderation",
           "image": {
-            "ref": "bafkreids5qy72px6yeqwxwdwynqv2oom5zrhqab7hfpv5lgtfpsh46nbfe",
+            "ref": {
+              "$link": "bafkreids5qy72px6yeqwxwdwynqv2oom5zrhqab7hfpv5lgtfpsh46nbfe"
+            },
             "size": 275806,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -9265,7 +9559,9 @@
         {
           "alt": "A screenshot of the Moderation screen\n\nContent filtering\nMuted words & tags\nModeration lists\nMuted accounts\nBlocked accounts\n\nA red arrow is pointed at Muted words & tags",
           "image": {
-            "ref": "bafkreidlcpvkrimoizqs522ds6ztuuafljcx5i4eub4kvsszqx3lhvbb3m",
+            "ref": {
+              "$link": "bafkreidlcpvkrimoizqs522ds6ztuuafljcx5i4eub4kvsszqx3lhvbb3m"
+            },
             "size": 333795,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -9278,7 +9574,9 @@
         {
           "alt": "A screenshot of the mute words menu\n\nAdd muted words and tags\n\nPosts can be muted based on their text, their tags, or both.\n\nEnter a word or tag\n\nMute in text & tags\nMute in tags only\n\nAdd +\n\nWe recommend avoiding common words that appear in many posts, since it can result in no posts being shown.",
           "image": {
-            "ref": "bafkreidgukpqxkrdnbhdgmecgwj3xqf2jwqj6cfcmelpdwua7moobu3c3e",
+            "ref": {
+              "$link": "bafkreidgukpqxkrdnbhdgmecgwj3xqf2jwqj6cfcmelpdwua7moobu3c3e"
+            },
             "size": 628954,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -9318,7 +9616,9 @@
         {
           "alt": "A screenshot of Bluesky. A menu is open over a post\n\nThe post says “#Hashtag incoming”\n\nThe menu items are\n“See #Hashtag posts”\n“See #Hashtag posts by this user”\n“Mute #Hashtag posts”",
           "image": {
-            "ref": "bafkreib5rlz2v4kabbstwsxuimgelmuksqztxuspc7hkdyvppcmavpnira",
+            "ref": {
+              "$link": "bafkreib5rlz2v4kabbstwsxuimgelmuksqztxuspc7hkdyvppcmavpnira"
+            },
             "size": 674266,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -9406,7 +9706,9 @@
         {
           "alt": "A screenshot showing the Dim mode in settings\n\nSettings\n+ Add account\nAccessibility\nRequire alt text before posting\nAppearance\nSystem Light Dark (selected)\nDark theme\nDim (selected) Dark\nBasics\nFollowing Feed Preferences\nThread Preferences\nMy Saved Feeds\nLanguages",
           "image": {
-            "ref": "bafkreihjsr22e36wqazige5r5fqe5k6ayievvo5k6gbiuhz7r7ld4cdhn4",
+            "ref": {
+              "$link": "bafkreihjsr22e36wqazige5r5fqe5k6ayievvo5k6gbiuhz7r7ld4cdhn4"
+            },
             "size": 333236,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -9419,7 +9721,9 @@
         {
           "alt": "A screenshot showing the Dark mode in settings\n\nSettings\n+ Add account\nAccessibility\nRequire alt text before posting\nAppearance\nSystem Light Dark (selected)\nDark theme\nDim Dark (selected)\nBasics\nFollowing Feed Preferences\nThread Preferences\nMy Saved Feeds\nLanguages",
           "image": {
-            "ref": "bafkreififg5gi4fjdntika5sodpqw2ellx642txp54by2uswtwkkbpwh6q",
+            "ref": {
+              "$link": "bafkreififg5gi4fjdntika5sodpqw2ellx642txp54by2uswtwkkbpwh6q"
+            },
             "size": 289661,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -9449,7 +9753,9 @@
         {
           "alt": "5,004,009 users",
           "image": {
-            "ref": "bafkreihp6pc6vauqyeply3tec2rd2mjho2ebrj74nnwq2p7luiuell6vuy",
+            "ref": {
+              "$link": "bafkreihp6pc6vauqyeply3tec2rd2mjho2ebrj74nnwq2p7luiuell6vuy"
+            },
             "size": 38752,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -9478,7 +9784,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/02-22-2024-open-social-web",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -9607,7 +9915,9 @@
         {
           "alt": "A screenshot of a post with the Follow button\n\nPost\nNeil Gaiman\n@neilhimself.neilgaiman....\nFollow\nThe @cherylmorgan.bsky.social essay on what alternate words are and aren't is excellent too!",
           "image": {
-            "ref": "bafkreibllavughg2eq2ap6l7ugydsglepy7wzts76qnbue2ks4rjemowc4",
+            "ref": {
+              "$link": "bafkreibllavughg2eq2ap6l7ugydsglepy7wzts76qnbue2ks4rjemowc4"
+            },
             "size": 124901,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -9620,7 +9930,9 @@
         {
           "alt": "A screenshot of the post interface with the share button added\n\nFeb 16, 2024 at 11:48AM\n148 reposts\n706 liks\n46 replies\n148 reposts\n706 likes",
           "image": {
-            "ref": "bafkreifpgtikskx7ichztnu6b6qbzd63vsnzr4zw6hfty4vpeurlthp76y",
+            "ref": {
+              "$link": "bafkreifpgtikskx7ichztnu6b6qbzd63vsnzr4zw6hfty4vpeurlthp76y"
+            },
             "size": 61362,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -9660,7 +9972,9 @@
         {
           "alt": "A screenshot of the settings page with the \"Change Password\" button highlighted\n\nSettings\nOpen links with the in-app browser\nAccount\nChange Password\nExport My Data",
           "image": {
-            "ref": "bafkreia3oi4qw2yvsudn7wfjkjn4u3dktqc7wtu352tkoy2e6mrjtukx2y",
+            "ref": {
+              "$link": "bafkreia3oi4qw2yvsudn7wfjkjn4u3dktqc7wtu352tkoy2e6mrjtukx2y"
+            },
             "size": 74592,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -9738,7 +10052,9 @@
         {
           "alt": "Screenshot of the Super Bowl LVIII feed header. There is a Pin to home button in black in the top right corner.",
           "image": {
-            "ref": "bafkreiapdk5loj4i2tiy6bcu4fd2ngfaarznzzyiadjc7nwdenjkevuf24",
+            "ref": {
+              "$link": "bafkreiapdk5loj4i2tiy6bcu4fd2ngfaarznzzyiadjc7nwdenjkevuf24"
+            },
             "size": 259376,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -9912,7 +10228,9 @@
         {
           "alt": "A chart of new user signups to Bluesky. The number 1,000,179 is in front of the chart in red text.",
           "image": {
-            "ref": "bafkreiclwuyqzgmuwuzmefpzrz2rgw47c3oxl2vzn6fy2zlbfhal376hby",
+            "ref": {
+              "$link": "bafkreiclwuyqzgmuwuzmefpzrz2rgw47c3oxl2vzn6fy2zlbfhal376hby"
+            },
             "size": 120357,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -10104,7 +10422,9 @@
         {
           "alt": "A screenshot of a post by bsky.app demonstrating text selection\n\nBluesky @bsky.app\nYou can now sign up for Bluesky without an invite! 🎉\n\nbsky.social/about/blog/0...",
           "image": {
-            "ref": "bafkreifohz7wckxeefxtjmqq6vmfghm2yccrdbqmubzavw5cll7ylgqcum",
+            "ref": {
+              "$link": "bafkreifohz7wckxeefxtjmqq6vmfghm2yccrdbqmubzavw5cll7ylgqcum"
+            },
             "size": 116401,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -10133,7 +10453,9 @@
       "external": {
         "uri": "https://bsky.social/",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -10233,7 +10555,9 @@
         {
           "alt": "A multi-panel comic. One character says, 'At Bluesky, I can customize my own experience and if I move, everything comes with me?!' Jay smiles and says, 'Yes, it's the last social account you'll ever have to create!' The two run across a bridge towards a magical mountainside. They say, 'Come on, let's go explore!'",
           "image": {
-            "ref": "bafkreieafcuw57t5bplnffhzdsi6au2qg5zp4zqwsolpnwduqui5hwyc6e",
+            "ref": {
+              "$link": "bafkreieafcuw57t5bplnffhzdsi6au2qg5zp4zqwsolpnwduqui5hwyc6e"
+            },
             "size": 769059,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -10273,7 +10597,9 @@
         {
           "alt": "A multi-panel comic. Jay says, 'At Bluesky, you choose what you want to see instead of being held to the whims of a blackbox algorithm. There are already tens of thousands of feeds! Anyone can make or subscribe to feeds!' A troll appears. Jay says, 'And for things you don't want to see, you can stack additional layers of moderation as easily as following a new account.' Poof! Fences go up and the troll disappears. Jay continues to describe Bluesky's open network. 'With Bluesky, everything is connected. Dock at any port — you can explore the entire network. And wherever you go, your whole network comes with you.'",
           "image": {
-            "ref": "bafkreihqogtekv4tzala3wtlz7k5cipadd7l4djiqqyiq5ybcfbii6zfw4",
+            "ref": {
+              "$link": "bafkreihqogtekv4tzala3wtlz7k5cipadd7l4djiqqyiq5ybcfbii6zfw4"
+            },
             "size": 939176,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -10313,7 +10639,9 @@
         {
           "alt": "A multi-panel comic. Two characters stand amidst a pile of rubble. One says, 'I think it's time to leave old social. This keeps happening. I have to start over again. I'm tired.' The two characters board a boat. Jay says, 'Don't worry! Better things are ahead at Bluesky!' They arrive to a beautiful, festive area that has buildings labeled News, Discover, Art, Science, and more.",
           "image": {
-            "ref": "bafkreifsnmwmel7vksbx6mkgssa6ts5bbyxa6n5sppq6343vnwhucflhc4",
+            "ref": {
+              "$link": "bafkreifsnmwmel7vksbx6mkgssa6ts5bbyxa6n5sppq6343vnwhucflhc4"
+            },
             "size": 703265,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -10367,7 +10695,9 @@
       "external": {
         "uri": "https://bsky.social/about/blog/02-06-2024-join-bluesky",
         "thumb": {
-          "ref": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy",
+          "ref": {
+            "$link": "bafkreif5bxpqjyyjmsqphbuvloo5c7ieqqs54i4wychem2ebvpw7uaxasy"
+          },
           "size": 502451,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -10603,7 +10933,9 @@
         {
           "alt": "How should we open this link?\n\nYour choice will be saved, but can be changed later in settings.\n\nUse in-app browser\n\nUse my default browser\n\nCancel",
           "image": {
-            "ref": "bafkreibsxufqsp5q2yfwshwogixf6oz46kgtfipnpebznp6d2ff7jktq44",
+            "ref": {
+              "$link": "bafkreibsxufqsp5q2yfwshwogixf6oz46kgtfipnpebznp6d2ff7jktq44"
+            },
             "size": 107496,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -10658,7 +10990,9 @@
         {
           "alt": "A post written in german with a suggestion\n\n\"Are you writing in German? Yes\"",
           "image": {
-            "ref": "bafkreia3pkycb6fzllp6rqh4qb4uoaqhrwtvxfhgdtcedobshrypoxbfzy",
+            "ref": {
+              "$link": "bafkreia3pkycb6fzllp6rqh4qb4uoaqhrwtvxfhgdtcedobshrypoxbfzy"
+            },
             "size": 337037,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -10824,7 +11158,9 @@
         {
           "alt": "External Media\n\nThis content is hosted by Tenor. Do you want to enable external media?\n\nExternal media may allow websites to collect information about you and your device. No information is sent or requested until you press the \"play\" button.\n\nEnable External Media\nEnable Tenor Only\nNo thanks",
           "image": {
-            "ref": "bafkreihnqjo5h6zidetycqujjetxqchs72m6hqi4wxctm2svd53rycdljm",
+            "ref": {
+              "$link": "bafkreihnqjo5h6zidetycqujjetxqchs72m6hqi4wxctm2svd53rycdljm"
+            },
             "size": 235114,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -10837,7 +11173,9 @@
         {
           "alt": "Settings screen. Privacy. External Media Preferences.",
           "image": {
-            "ref": "bafkreicvncno6iuhthteaoquynztjuf6upi7kastxfalpmyictc3hs7chy",
+            "ref": {
+              "$link": "bafkreicvncno6iuhthteaoquynztjuf6upi7kastxfalpmyictc3hs7chy"
+            },
             "size": 137709,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -10850,7 +11188,9 @@
         {
           "alt": "External Media Preferences\nCustomize media from external sites.\n\nExternal media may allow websites to collect information about you and your device. No information is sent or requested until you press the \"play\" button.\n\nEnable media players for YouTube, YouTube Shorts, Vimeo, Twitch, GIPHY, Tenor, Spotify, Apple Music",
           "image": {
-            "ref": "bafkreifd6gn4rnjdxm3k7x4caxxtmwf2sveoj7mrt45a7f2jxjub5o3lea",
+            "ref": {
+              "$link": "bafkreifd6gn4rnjdxm3k7x4caxxtmwf2sveoj7mrt45a7f2jxjub5o3lea"
+            },
             "size": 209195,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -11283,7 +11623,9 @@
         {
           "alt": "A screenshot of the post dropdown with an arrow pointing to the \"Hide post\" option",
           "image": {
-            "ref": "bafkreib4qxsfsbzmhw4lmq6cc32ezz2vgzzdhhmhlpvrzx7gzi3gt3baou",
+            "ref": {
+              "$link": "bafkreib4qxsfsbzmhw4lmq6cc32ezz2vgzzdhhmhlpvrzx7gzi3gt3baou"
+            },
             "size": 232115,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -11423,7 +11765,9 @@
         {
           "alt": "The bluesky logo with the blue butterfly",
           "image": {
-            "ref": "bafkreidypzoaybmfj5h7pnpiyct6ng5yae6ydp4czrm72ocg7ev6vbirri",
+            "ref": {
+              "$link": "bafkreidypzoaybmfj5h7pnpiyct6ng5yae6ydp4czrm72ocg7ev6vbirri"
+            },
             "size": 68017,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -11557,7 +11901,9 @@
         {
           "alt": "A screenshot of Bluesky's side navigation. An arrow labeled \"Go here\" points at \"Moderation\"",
           "image": {
-            "ref": "bafkreibcggsih6ofel4iwqhanbgtetec6gi5pcsi7vacv6rugucptlngie",
+            "ref": {
+              "$link": "bafkreibcggsih6ofel4iwqhanbgtetec6gi5pcsi7vacv6rugucptlngie"
+            },
             "size": 179221,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -11570,7 +11916,9 @@
         {
           "alt": "A screenshot of the \"opt out\" interface\n\nDiscourage apps from showing my account to logged-out users\n\nBluesky will not show your profile and posts to logged-out users. Other apps may not honor this request. This does not make your account private.\n\nNote: Bluesky is an open and public network. This setting only limits the visibility of your content on the Bluesky app and website, and other apps may not respect this setting. Your content may still be shown to logged-out users by other apps and websites.",
           "image": {
-            "ref": "bafkreid4dcvxkvj3lnkje4wfpbd74s4ko3uqsuzodsghqzsewlf2tkedpm",
+            "ref": {
+              "$link": "bafkreid4dcvxkvj3lnkje4wfpbd74s4ko3uqsuzodsghqzsewlf2tkedpm"
+            },
             "size": 493447,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -11610,7 +11958,9 @@
         {
           "alt": "A screenshot of the post composer with an arrow to the speech bubbles icon labeled \"Who can reply\"",
           "image": {
-            "ref": "bafkreifyq2y5rofe6su7ghseqwpkobzqpaoqzfughcidelks32r56opgpy",
+            "ref": {
+              "$link": "bafkreifyq2y5rofe6su7ghseqwpkobzqpaoqzfughcidelks32r56opgpy"
+            },
             "size": 86463,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -11623,7 +11973,9 @@
         {
           "alt": "A screenshot of the \"Who can reply\" interface which says\n\nChoose \"Everybody\" or \"Nobody\"\n\nor combine these options: \"Mentioned Users,\" \"Followed users\"",
           "image": {
-            "ref": "bafkreigzcvm25lh7vol2y5nvdwqspsw2web7yy5gbpfgkxpwfpj7b6ifny",
+            "ref": {
+              "$link": "bafkreigzcvm25lh7vol2y5nvdwqspsw2web7yy5gbpfgkxpwfpj7b6ifny"
+            },
             "size": 199968,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -11636,7 +11988,9 @@
         {
           "alt": "A screenshot of a post by \"Alice\" which says \"Hello, world!\". Underneath the post an interface explains that \"Only mentioned users and users followed by @alice.test can reply.\"",
           "image": {
-            "ref": "bafkreibcfklboyln2s6xcl3shklxxyy2w7zt5axauvendh3jizku4oad4u",
+            "ref": {
+              "$link": "bafkreibcfklboyln2s6xcl3shklxxyy2w7zt5axauvendh3jizku4oad4u"
+            },
             "size": 211610,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -11764,7 +12118,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/5-19-2023-user-faq",
         "thumb": {
-          "ref": "bafkreig5povmz5mlx6uu3mmffo46gdg4nb6mc3plrytxgnh3qhkpyh23ai",
+          "ref": {
+            "$link": "bafkreig5povmz5mlx6uu3mmffo46gdg4nb6mc3plrytxgnh3qhkpyh23ai"
+          },
           "size": 154165,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -11834,7 +12190,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/11-15-2023-toward-federation",
         "thumb": {
-          "ref": "bafkreib5j7m4dzbbe5wl7lsk633ja7tgbwypttpjsmogdyniblzzfoea5i",
+          "ref": {
+            "$link": "bafkreib5j7m4dzbbe5wl7lsk633ja7tgbwypttpjsmogdyniblzzfoea5i"
+          },
           "size": 166172,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -11967,7 +12325,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/9-12-2023-one-million",
         "thumb": {
-          "ref": "bafkreideh3pnofhlj2cirx6swn7st4xszz7dmylcioz2gepmtsouhsqhtu",
+          "ref": {
+            "$link": "bafkreideh3pnofhlj2cirx6swn7st4xszz7dmylcioz2gepmtsouhsqhtu"
+          },
           "size": 153371,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -12063,7 +12423,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/7-27-2023-custom-feeds",
         "thumb": {
-          "ref": "bafkreicys5vsgrhoq26vg6mwyti4o5feylljhocgy6r6xznxz57azdcmoi",
+          "ref": {
+            "$link": "bafkreicys5vsgrhoq26vg6mwyti4o5feylljhocgy6r6xznxz57azdcmoi"
+          },
           "size": 420910,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -12369,7 +12731,9 @@
         {
           "alt": "A screenshot of the email change and verification tools in Settings",
           "image": {
-            "ref": "bafkreibcbd5rfa62bzdinv7z4r336a4ybsmkars2s3ukmurebycuxsa7ca",
+            "ref": {
+              "$link": "bafkreibcbd5rfa62bzdinv7z4r336a4ybsmkars2s3ukmurebycuxsa7ca"
+            },
             "size": 168913,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -12382,7 +12746,9 @@
         {
           "alt": "A screenshot of the email change tool",
           "image": {
-            "ref": "bafkreicweutugbjebuvnqgmvydnmjn2oph3ascen7ultvq5pdp5yascx7i",
+            "ref": {
+              "$link": "bafkreicweutugbjebuvnqgmvydnmjn2oph3ascen7ultvq5pdp5yascx7i"
+            },
             "size": 167167,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -12477,7 +12843,9 @@
         {
           "alt": "",
           "image": {
-            "ref": "bafkreidf3ystxebv33boyb5hr2ggwmlee5x53vubwelsuvmcw3tq4p36pi",
+            "ref": {
+              "$link": "bafkreidf3ystxebv33boyb5hr2ggwmlee5x53vubwelsuvmcw3tq4p36pi"
+            },
             "size": 148647,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -12499,7 +12867,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/3-30-2023-algorithmic-choice",
         "thumb": {
-          "ref": "bafkreie6cqhg2f6o3khixloazc7w5o5hsvlpmx46tmnxlwmpn6laoln7pi",
+          "ref": {
+            "$link": "bafkreie6cqhg2f6o3khixloazc7w5o5hsvlpmx46tmnxlwmpn6laoln7pi"
+          },
           "size": 722939,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -12673,7 +13043,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/7-27-2023-custom-feeds",
         "thumb": {
-          "ref": "bafkreicys5vsgrhoq26vg6mwyti4o5feylljhocgy6r6xznxz57azdcmoi",
+          "ref": {
+            "$link": "bafkreicys5vsgrhoq26vg6mwyti4o5feylljhocgy6r6xznxz57azdcmoi"
+          },
           "size": 420910,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -12699,7 +13071,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/4-13-2023-moderation",
         "thumb": {
-          "ref": "bafkreibibkndirnezvrgyhiwgw7ald5r57rdk3anik2nupyksnuy2sh7ui",
+          "ref": {
+            "$link": "bafkreibibkndirnezvrgyhiwgw7ald5r57rdk3anik2nupyksnuy2sh7ui"
+          },
           "size": 359802,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -12971,7 +13345,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/press-faq",
         "thumb": {
-          "ref": "bafkreig5povmz5mlx6uu3mmffo46gdg4nb6mc3plrytxgnh3qhkpyh23ai",
+          "ref": {
+            "$link": "bafkreig5povmz5mlx6uu3mmffo46gdg4nb6mc3plrytxgnh3qhkpyh23ai"
+          },
           "size": 154165,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -12997,7 +13373,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/5-19-2023-user-faq",
         "thumb": {
-          "ref": "bafkreideh3pnofhlj2cirx6swn7st4xszz7dmylcioz2gepmtsouhsqhtu",
+          "ref": {
+            "$link": "bafkreideh3pnofhlj2cirx6swn7st4xszz7dmylcioz2gepmtsouhsqhtu"
+          },
           "size": 153371,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -13694,7 +14072,9 @@
         {
           "alt": "A screenshot of the side navigation menu showing the Lists link",
           "image": {
-            "ref": "bafkreihto6wsgzoqzuu4tmisy2nppvdyk7e3nh2mpbc5t3fbfjcmriuef4",
+            "ref": {
+              "$link": "bafkreihto6wsgzoqzuu4tmisy2nppvdyk7e3nh2mpbc5t3fbfjcmriuef4"
+            },
             "size": 281637,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -13707,7 +14087,9 @@
         {
           "alt": "A screenshot of the User Lists interface with an arrow pointing at the \"New\" button",
           "image": {
-            "ref": "bafkreignlvmr5qcrxdaxjoe3shyi3rhbodtzlgcjvlvosohcwhm4qxqqkm",
+            "ref": {
+              "$link": "bafkreignlvmr5qcrxdaxjoe3shyi3rhbodtzlgcjvlvosohcwhm4qxqqkm"
+            },
             "size": 109105,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -13720,7 +14102,9 @@
         {
           "alt": "A screenshot of a list with an arrow pointing at the \"Add User\" button",
           "image": {
-            "ref": "bafkreied7retikp3wxl6sazts6eeqfkszggegaguau6krxycoex63eezou",
+            "ref": {
+              "$link": "bafkreied7retikp3wxl6sazts6eeqfkszggegaguau6krxycoex63eezou"
+            },
             "size": 275663,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -13886,7 +14270,9 @@
         {
           "alt": "A screenshot of the post compose screen. There are two thumbnails of natural scenery, and a text field that explains the benefits of alt text: “Alt text describes images for blind and low-vision users, and helps give context to everyone.”",
           "image": {
-            "ref": "bafkreiaqrszln3xpp7en2s7c2gduyj2oqj6l6y257jyzxnurfgfprnsbpm",
+            "ref": {
+              "$link": "bafkreiaqrszln3xpp7en2s7c2gduyj2oqj6l6y257jyzxnurfgfprnsbpm"
+            },
             "size": 673587,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -13895,7 +14281,9 @@
         {
           "alt": "A screenshot of the screen to add alt text. An image of a lake with mountains in the background fills the top half of the screen. On the bottom half, there is a text field that prompts users: “Add alt text.”",
           "image": {
-            "ref": "bafkreihl5jjqwdckpy2rg4dwm2nh5r2htwqfpaij6bbqummnu34eeylqgu",
+            "ref": {
+              "$link": "bafkreihl5jjqwdckpy2rg4dwm2nh5r2htwqfpaij6bbqummnu34eeylqgu"
+            },
             "size": 911833,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -14007,7 +14395,9 @@
         {
           "alt": "A screenshot of the side navigation with an arrow pointing at the Moderation link",
           "image": {
-            "ref": "bafkreigrcszzqx7fb2y2plmyibkgfa44pcb7ezchackpwxmer7qcigl25u",
+            "ref": {
+              "$link": "bafkreigrcszzqx7fb2y2plmyibkgfa44pcb7ezchackpwxmer7qcigl25u"
+            },
             "size": 283997,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -14020,7 +14410,9 @@
         {
           "alt": "A screenshot of the Moderation screen with an arrow pointing at the \"Moderation lists\" link",
           "image": {
-            "ref": "bafkreiedbac7jmev26na7pmcynfxy2u3mflaojagma7nra6rqeclhbheme",
+            "ref": {
+              "$link": "bafkreiedbac7jmev26na7pmcynfxy2u3mflaojagma7nra6rqeclhbheme"
+            },
             "size": 126826,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -14033,7 +14425,9 @@
         {
           "alt": "A screenshot of a Moderation List",
           "image": {
-            "ref": "bafkreiajdi7n26am2i6rhknxhpgxutt5egenbqx2gwwq3xjhmdla33qsja",
+            "ref": {
+              "$link": "bafkreiajdi7n26am2i6rhknxhpgxutt5egenbqx2gwwq3xjhmdla33qsja"
+            },
             "size": 247040,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -14046,7 +14440,9 @@
         {
           "alt": "A screenshot of the \"Mute\" and \"Block\" options",
           "image": {
-            "ref": "bafkreidiafukvt7xsj2qks7p3qmk3a6ok4vzxfygnf6oakgnduw6awmxfq",
+            "ref": {
+              "$link": "bafkreidiafukvt7xsj2qks7p3qmk3a6ok4vzxfygnf6oakgnduw6awmxfq"
+            },
             "size": 358717,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -14179,7 +14575,9 @@
         {
           "alt": "a screenshot showing where to find home-feed and thread preferences in settings",
           "image": {
-            "ref": "bafkreid3ood3eimya3fgcm4xrknbct4h2dd2covqr24wlxi2ptljk2byb4",
+            "ref": {
+              "$link": "bafkreid3ood3eimya3fgcm4xrknbct4h2dd2covqr24wlxi2ptljk2byb4"
+            },
             "size": 169937,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -14188,7 +14586,9 @@
         {
           "alt": "a screenshot showing the followed users only filter in home feed preferences",
           "image": {
-            "ref": "bafkreidxnm2ifrrcqoq6prr7nso3lymnpd7ipkn5sts4zi6mcokph2lhme",
+            "ref": {
+              "$link": "bafkreidxnm2ifrrcqoq6prr7nso3lymnpd7ipkn5sts4zi6mcokph2lhme"
+            },
             "size": 259160,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -14197,7 +14597,9 @@
         {
           "alt": "a screenshot showing the reply sorting preferences for threads",
           "image": {
-            "ref": "bafkreibjjwo6e4efr2iredeqfy5zfzfsbeowamf2mum2ruqzqdszw3mdve",
+            "ref": {
+              "$link": "bafkreibjjwo6e4efr2iredeqfy5zfzfsbeowamf2mum2ruqzqdszw3mdve"
+            },
             "size": 250350,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -14337,7 +14739,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/7-27-2023-custom-feeds",
         "thumb": {
-          "ref": "bafkreicys5vsgrhoq26vg6mwyti4o5feylljhocgy6r6xznxz57azdcmoi",
+          "ref": {
+            "$link": "bafkreicys5vsgrhoq26vg6mwyti4o5feylljhocgy6r6xznxz57azdcmoi"
+          },
           "size": 420910,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -14482,7 +14886,9 @@
         {
           "alt": "A screenshot of a list with an arrow pointing at the \"Pin to home\" button",
           "image": {
-            "ref": "bafkreiegkvwjjtledxtjnrnm2evvluc4adu6des3uorvvvxgfmvvthm5ii",
+            "ref": {
+              "$link": "bafkreiegkvwjjtledxtjnrnm2evvluc4adu6des3uorvvvxgfmvvthm5ii"
+            },
             "size": 197540,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -14495,7 +14901,9 @@
         {
           "alt": "A screenshot of the Home screen with an arrow pointing at the User List in the feeds",
           "image": {
-            "ref": "bafkreia3bvbbfumwednjjm76ytzbrumunzjedz3o6ra4mdpgl4e5fiduxy",
+            "ref": {
+              "$link": "bafkreia3bvbbfumwednjjm76ytzbrumunzjedz3o6ra4mdpgl4e5fiduxy"
+            },
             "size": 87700,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -14508,7 +14916,9 @@
         {
           "alt": "A screenshot of the Feeds screen with an arrow pointing at the User List in the feeds",
           "image": {
-            "ref": "bafkreiewjui3kufbp5ohmwtazyxqh5lllppyw6jnohx5kcytgw46nojisa",
+            "ref": {
+              "$link": "bafkreiewjui3kufbp5ohmwtazyxqh5lllppyw6jnohx5kcytgw46nojisa"
+            },
             "size": 115274,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -14588,7 +14998,9 @@
         {
           "alt": "a screenshot of showing where to reach the home feed preferences from the home page",
           "image": {
-            "ref": "bafkreibhb5kqfu75hd6hf4632vhpnjzvo6nzxwofjgobjeftldiocmxm54",
+            "ref": {
+              "$link": "bafkreibhb5kqfu75hd6hf4632vhpnjzvo6nzxwofjgobjeftldiocmxm54"
+            },
             "size": 63054,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -14597,7 +15009,9 @@
         {
           "alt": "a screenshot showing how to enable showing posts from my feeds in the following feed",
           "image": {
-            "ref": "bafkreigbjm36v7k4ud4q5nafzexa3nmjfiqbbllfwk6va72gfa5qvq2zpy",
+            "ref": {
+              "$link": "bafkreigbjm36v7k4ud4q5nafzexa3nmjfiqbbllfwk6va72gfa5qvq2zpy"
+            },
             "size": 340040,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -14606,7 +15020,9 @@
         {
           "alt": "a screenshot showing a post from a feed in the following feed",
           "image": {
-            "ref": "bafkreiekvtgskjd3rvbkukuqlfnsbw3ix5a3mtnu7oios67zdxinuc6htq",
+            "ref": {
+              "$link": "bafkreiekvtgskjd3rvbkukuqlfnsbw3ix5a3mtnu7oios67zdxinuc6htq"
+            },
             "size": 183102,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -14700,7 +15116,9 @@
         {
           "alt": "A screenshot of the composer with the \"Add Label\" button highlighted",
           "image": {
-            "ref": "bafkreihxjmnnggnhcxhaonir55xnczbd2ao2pre34tdkez7urn3o2pfjgq",
+            "ref": {
+              "$link": "bafkreihxjmnnggnhcxhaonir55xnczbd2ao2pre34tdkez7urn3o2pfjgq"
+            },
             "size": 491917,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -14709,7 +15127,9 @@
         {
           "alt": "A screenshot of the \"Add a content warning\" interface",
           "image": {
-            "ref": "bafkreid6ymk3lgswfhcekh73ydd2ymtdttuelkqnws5gythggw3slkvsnq",
+            "ref": {
+              "$link": "bafkreid6ymk3lgswfhcekh73ydd2ymtdttuelkqnws5gythggw3slkvsnq"
+            },
             "size": 206057,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -14812,7 +15232,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/7-05-2023-namecheap",
         "thumb": {
-          "ref": "bafkreigniavb326orgcjoadbzq76om2jlji5ip5wyh4jwka4ms3x7wlmh4",
+          "ref": {
+            "$link": "bafkreigniavb326orgcjoadbzq76om2jlji5ip5wyh4jwka4ms3x7wlmh4"
+          },
           "size": 332348,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -14884,7 +15306,9 @@
         {
           "alt": "A screenshot of the custom feeds tab",
           "image": {
-            "ref": "bafkreifalbgg3duml6hyy4ew7mc55jsewxi2vdez4tnm6vxdp5224d5ab4",
+            "ref": {
+              "$link": "bafkreifalbgg3duml6hyy4ew7mc55jsewxi2vdez4tnm6vxdp5224d5ab4"
+            },
             "size": 922471,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -14925,7 +15349,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/6-13-2023-what-is-bluesky",
         "thumb": {
-          "ref": "bafkreideh3pnofhlj2cirx6swn7st4xszz7dmylcioz2gepmtsouhsqhtu",
+          "ref": {
+            "$link": "bafkreideh3pnofhlj2cirx6swn7st4xszz7dmylcioz2gepmtsouhsqhtu"
+          },
           "size": 153371,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -15008,7 +15434,9 @@
       "external": {
         "uri": "https://atproto.com/",
         "thumb": {
-          "ref": "bafkreibubcts6tfajfi464s3mzipuv43snbiq6jy62abf7nlqgez4iwzae",
+          "ref": {
+            "$link": "bafkreibubcts6tfajfi464s3mzipuv43snbiq6jy62abf7nlqgez4iwzae"
+          },
           "size": 610237,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -15109,7 +15537,9 @@
         {
           "alt": "",
           "image": {
-            "ref": "bafkreiget474vaamg3krtzjzpl52v6q6rjveotcmajgfymcjuo3gywrnoi",
+            "ref": {
+              "$link": "bafkreiget474vaamg3krtzjzpl52v6q6rjveotcmajgfymcjuo3gywrnoi"
+            },
             "size": 33065,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -15153,7 +15583,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/6-02-2023-beta-update",
         "thumb": {
-          "ref": "bafkreideh3pnofhlj2cirx6swn7st4xszz7dmylcioz2gepmtsouhsqhtu",
+          "ref": {
+            "$link": "bafkreideh3pnofhlj2cirx6swn7st4xszz7dmylcioz2gepmtsouhsqhtu"
+          },
           "size": 153371,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -15343,7 +15775,9 @@
         {
           "alt": "a screenshot of the new feeds tab on mobile",
           "image": {
-            "ref": "bafkreib2tm22g7aiwvqw75anktydskx6v44t4qo3qx574kpro6tmltxnau",
+            "ref": {
+              "$link": "bafkreib2tm22g7aiwvqw75anktydskx6v44t4qo3qx574kpro6tmltxnau"
+            },
             "size": 388194,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -15352,7 +15786,9 @@
         {
           "alt": "a screenshot of the new feeds sidebar on desktop web",
           "image": {
-            "ref": "bafkreicybhripac6ipymmtml6fv7h3pq6odoawqz5qk6wnwaouj2c6z6bi",
+            "ref": {
+              "$link": "bafkreicybhripac6ipymmtml6fv7h3pq6odoawqz5qk6wnwaouj2c6z6bi"
+            },
             "size": 367302,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -15467,7 +15903,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/6-02-2023-beta-update",
         "thumb": {
-          "ref": "bafkreideh3pnofhlj2cirx6swn7st4xszz7dmylcioz2gepmtsouhsqhtu",
+          "ref": {
+            "$link": "bafkreideh3pnofhlj2cirx6swn7st4xszz7dmylcioz2gepmtsouhsqhtu"
+          },
           "size": 153371,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -15583,7 +16021,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/6-23-2023-moderation-proposals",
         "thumb": {
-          "ref": "bafkreideh3pnofhlj2cirx6swn7st4xszz7dmylcioz2gepmtsouhsqhtu",
+          "ref": {
+            "$link": "bafkreideh3pnofhlj2cirx6swn7st4xszz7dmylcioz2gepmtsouhsqhtu"
+          },
           "size": 153371,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -15655,7 +16095,9 @@
         {
           "alt": "A screenshot of the post compose screen. The language button, which says “en” for English, is highlighted with a red arrow.",
           "image": {
-            "ref": "bafkreihw3qjabq2z7xrcrayvr5e6w2qxbbhrr3xkq2iaha4b53o4nbb3uy",
+            "ref": {
+              "$link": "bafkreihw3qjabq2z7xrcrayvr5e6w2qxbbhrr3xkq2iaha4b53o4nbb3uy"
+            },
             "size": 159845,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -15664,7 +16106,9 @@
         {
           "alt": "A screenshot of the post languages screen. It asks, “Which languages are used in this post? The toggle for English is on, and many other languages are listed alphabetically below.",
           "image": {
-            "ref": "bafkreift3zx2px6s3mgamo4smai5rlkrlyzmdgbpht55smwu5xghurjmdu",
+            "ref": {
+              "$link": "bafkreift3zx2px6s3mgamo4smai5rlkrlyzmdgbpht55smwu5xghurjmdu"
+            },
             "size": 272509,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -15776,7 +16220,9 @@
         {
           "alt": "a screenshot showing where to find thread preferences in the settings",
           "image": {
-            "ref": "bafkreiheqf7xmjxzrb5a3sijyitk2dqnt6zds6wr5e6boehepx2n7wa3ri",
+            "ref": {
+              "$link": "bafkreiheqf7xmjxzrb5a3sijyitk2dqnt6zds6wr5e6boehepx2n7wa3ri"
+            },
             "size": 163594,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -15785,7 +16231,9 @@
         {
           "alt": "a screenshot showing the threaded mode preference",
           "image": {
-            "ref": "bafkreidycngraz2via5lp7eu76xwuyqnc4c7hkk7od2yo7ljsmm73if5ha",
+            "ref": {
+              "$link": "bafkreidycngraz2via5lp7eu76xwuyqnc4c7hkk7od2yo7ljsmm73if5ha"
+            },
             "size": 301361,
             "$type": "blob",
             "mimeType": "image/jpeg"
@@ -15820,7 +16268,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/faq",
         "thumb": {
-          "ref": "bafkreideh3pnofhlj2cirx6swn7st4xszz7dmylcioz2gepmtsouhsqhtu",
+          "ref": {
+            "$link": "bafkreideh3pnofhlj2cirx6swn7st4xszz7dmylcioz2gepmtsouhsqhtu"
+          },
           "size": 153371,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -15867,7 +16317,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/4-21-2023-atproto-developer-ecosystem",
         "thumb": {
-          "ref": "bafkreibubcts6tfajfi464s3mzipuv43snbiq6jy62abf7nlqgez4iwzae",
+          "ref": {
+            "$link": "bafkreibubcts6tfajfi464s3mzipuv43snbiq6jy62abf7nlqgez4iwzae"
+          },
           "size": 610237,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -15999,7 +16451,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/7-05-2023-business-plan",
         "thumb": {
-          "ref": "bafkreideh3pnofhlj2cirx6swn7st4xszz7dmylcioz2gepmtsouhsqhtu",
+          "ref": {
+            "$link": "bafkreideh3pnofhlj2cirx6swn7st4xszz7dmylcioz2gepmtsouhsqhtu"
+          },
           "size": 153371,
           "$type": "blob",
           "mimeType": "image/jpeg"
@@ -16057,7 +16511,9 @@
       "external": {
         "uri": "https://blueskyweb.xyz/blog/5-5-2023-federation-architecture",
         "thumb": {
-          "ref": "bafkreifqlu5kqvix2anvdid6b6f3s4ls32i64ywtd6uypcl33yrdrboocq",
+          "ref": {
+            "$link": "bafkreifqlu5kqvix2anvdid6b6f3s4ls32i64ywtd6uypcl33yrdrboocq"
+          },
           "size": 209583,
           "$type": "blob",
           "mimeType": "image/jpeg"

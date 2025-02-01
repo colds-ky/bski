@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@atcute/car": ["atcute/packages/utilities/car/lib"],
+      "@atcute/cbor": ["atcute/packages/utilities/cbor/lib"],
+      "@atcute/uint8array": ["atcute/packages/utilities/uint8array/lib"]
+    }
+  }
+}

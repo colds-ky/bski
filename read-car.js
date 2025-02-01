@@ -1,13 +1,7 @@
 // @ts-check
 
-// import { decode as decodeCBOR } from './decode/cbor-x/decoder';
-// import { decode as decodeCID } from './decode/js-multiformats/cid';
-// import { CarBufferReader } from './decode/js-car/buffer-reader-browser';
-
-import { readCar } from './src/decode/car/reader';
-import { decode as decodeCBOR2 } from './src/decode/cbor/decode';
-import { decode as decodeCID2 } from './src/decode/cbor/cid';
-import { toBase32 } from './src/decode/multibase/base32';
+import { readCar } from '@atcute/car';
+import { decode, toCidLink } from '@atcute/cbor';
 
 const YIELD_AFTER_ITERATION = 300;
 
@@ -41,6 +35,7 @@ export function sequenceReadCAR(messageBuf, did) {
  * @param {number} yieldAfterIteration
  */
 function* sequenceReadCARCore(messageBuf, did, yieldAfterIteration) {
+  debugger;
   if (typeof messageBuf === 'string')
     [messageBuf, did] = /** @type {[any, any]} */([did, messageBuf]);
 
@@ -53,8 +48,8 @@ function* sequenceReadCARCore(messageBuf, did, yieldAfterIteration) {
 
   const car = readCar(bytes);
 
-  const recordsByCID = new Map();
-  const keyByCID = new Map();
+  const recordsByCid = new Map();
+  const keyByCid = new Map();
   const errors = [];
   const decoder = new TextDecoder();
 
@@ -71,10 +66,10 @@ function* sequenceReadCARCore(messageBuf, did, yieldAfterIteration) {
       pauseTime += batchParseStart - pauseStart;
     }
 
-    const record = decodeCBOR2(block.bytes);
+    const record = decode(block.bytes);
     if (record.$type) {
-      const blockCID = 'b' + toBase32(block.cid.bytes);
-      recordsByCID.set(blockCID, record);
+      const blockCid = toCidLink(block.cid).$link;
+      recordsByCid.set(blockCid, record);
     } else if (Array.isArray(record.e)) {
       let key = '';
       for (const sub of record.e) {
@@ -97,18 +92,13 @@ function* sequenceReadCARCore(messageBuf, did, yieldAfterIteration) {
           let cid;
           if (typeof sub.v === 'string') {
             cid = sub.v;
-          } else if (sub.v.value) {
-            const expandWithoutZero =
-              sub.v.value[0] ? sub.v.value :
-            /** @type {Uint8Array} */(sub.v.value).subarray(1);
-            cid = decodeCID2(expandWithoutZero);
-          } else if (sub.v.$bytes) {
-            cid = sub.v.$link;
+          } else if (sub.v.$link) {
+            cid = String(sub.v.$link);
           }
 
           if (!cid) continue;
 
-          keyByCID.set(cid, key);
+          keyByCid.set(cid, key);
         } catch (error) {
           if (!errors.length) console.error(error);
           errors.push(error);
@@ -123,13 +113,13 @@ function* sequenceReadCARCore(messageBuf, did, yieldAfterIteration) {
   /** @type {import('./firehose').FirehoseRecord[] & { parseTime: number }} */
   const all = /** @type {*} */([]);
 
-  for (const entry of recordsByCID) {
-    const cid = entry[0];
+  for (const entry of recordsByCid) {
+    const cid = entry[0].$link ? String(entry[0].$link) : String(entry[0]);
     /** @type {import('./firehose').FirehoseRecord} */
     const record = entry[1];
     record.repo = did;
     record.cid = cid;
-    const key = keyByCID.get(cid);
+    const key = keyByCid.get(cid);
     if (key) {
       record.path = key;
       record.uri = 'at://' + did + '/' + key;
@@ -169,3 +159,4 @@ function* sequenceReadCARCore(messageBuf, did, yieldAfterIteration) {
   all.parseTime = finish - parseStart - pauseTime;
   return all;
 }
+

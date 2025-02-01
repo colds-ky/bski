@@ -1,10 +1,8 @@
 // @ts-check
 /// <reference types='@atproto/api' />
 
-import { readCar } from './src/decode/car/reader';
-import { fromBytes } from './src/decode/cbor/bytes';
-import { toCIDLink } from './src/decode/cbor/cid-link';
-import { decode, decodeFirst } from './src/decode/cbor/decode';
+import { readCar } from '@atcute/car';
+import { decode, decodeFirst, fromBytes, toCidLink } from '@atcute/cbor';
 
 import { version } from './package.json';
 export { version };
@@ -395,7 +393,7 @@ function createAwaitPromise() {
 function readCarToMap(buffer) {
   const records = new Map();
   for (const { cid, bytes } of readCar(buffer).iterate()) {
-    records.set(toCIDLink(cid), decode(bytes));
+    records.set(toCidLink(cid), decode(bytes));
   }
   return records;
 }

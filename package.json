@@ -1,6 +1,6 @@
 {
   "name": "bski",
-  "version": "0.9.8",
+  "version": "0.9.9",
   "author": "Oleg Mihailik",
   "license": "MIT",
   "description": "BlueSky firehose/WebSocket and CAR in plain JavaScript",
@@ -30,5 +30,8 @@
   "devDependencies": {
     "esbuild": "^0.24.2",
     "rollup": "^4.32.1"
+  },
+  "dependencies": {
+    "@atcute/car": "^2.0.1"
   }
 }
