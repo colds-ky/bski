@@ -1,0 +1,3 @@
+[submodule "atcute"]
+	path = atcute
+	url = https://github.com/colds-ky/atcute-clone
