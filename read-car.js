@@ -1,6 +1,6 @@
 // @ts-check
 
-import { readCar } from '@atcute/car';
+import { readCar/*, iterateAtpRepo */ } from '@atcute/car';
 import { decode, toCidLink } from '@atcute/cbor';
 
 const YIELD_AFTER_ITERATION = 300;
@@ -12,6 +12,10 @@ const YIELD_AFTER_ITERATION = 300;
 export function readCAR(messageBuf, did) {
   if (typeof messageBuf === 'string')
     [messageBuf, did] = /** @type {[any, any]} */([did, messageBuf]);
+
+  // for (const x of iterateAtpRepo(messageBuf)) {
+  //   console.log(x);
+  // }
 
   /** @type {import('./firehose').FirehoseRepositoryRecord<keyof import('./firehose').RepositoryRecordTypes$>[] & { parseTime: number } | undefined} */
   let all;
@@ -35,7 +39,6 @@ export function sequenceReadCAR(messageBuf, did) {
  * @param {number} yieldAfterIteration
  */
 function* sequenceReadCARCore(messageBuf, did, yieldAfterIteration) {
-  debugger;
   if (typeof messageBuf === 'string')
     [messageBuf, did] = /** @type {[any, any]} */([did, messageBuf]);
 

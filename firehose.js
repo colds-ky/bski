@@ -284,7 +284,7 @@ export async function* firehose(address) {
         const action = op.action;
 
         const now = performance.now();
-        const record = op.cid ? car.get(op.cid) : undefined;
+        const record = op.cid ? car.get(op.cid.$link) : undefined;
 
         if (action === 'create' || action === 'update') {
           if (!op.cid) {
@@ -393,7 +393,7 @@ function createAwaitPromise() {
 function readCarToMap(buffer) {
   const records = new Map();
   for (const { cid, bytes } of readCar(buffer).iterate()) {
-    records.set(toCidLink(cid), decode(bytes));
+    records.set(toCidLink(cid).$link, decode(bytes));
   }
   return records;
 }
