@@ -55,16 +55,27 @@ function withReadCAR({ readCAR, sequenceReadCAR }) {
     assert.equal(carIter.length, carJSON.length, 'readCAR iter length');
 
     let lastLine = '';
+
+    var withSortingNormalized = false;
+
+    const carJSON_ordered = carJSON.slice().sort((x1, x2) => x1.cid > x2.cid ? +1 : x1.cid < x2.cid ? -1 : 0);
+    const carAll_ordered = carAll.slice().sort((x1, x2) => x1.cid > x2.cid ? +1 : x1.cid < x2.cid ? -1 : 0);
+    const carIter_ordered = carIter.slice().sort((x1, x2) => x1.cid > x2.cid ? +1 : x1.cid < x2.cid ? -1 : 0);
+
     for (let i = 0; i < carAll.length; i++) {
-      let line = '  [' + i.toLocaleString() + '] ' + carAll[i].$type + '..';
+      const recJson = withSortingNormalized ? carJSON_ordered[i] : carJSON[i];
+      const recAll = withSortingNormalized ? carAll_ordered[i] : carAll[i];
+      const recIter = withSortingNormalized ? carIter_ordered[i] : carIter[i];
+
+      let line = '  [' + i.toLocaleString() + '] ' + recJson.$type + '..';
       process.stdout.write(
         '\r' + [...lastLine].map(ch => ' ').join('') +
         '\r' + line);
-      assert.deepEqual(JSON.parse(JSON.stringify(carAll[i])), carJSON[i], 'readCAR whole');
+      assert.deepEqual(JSON.parse(JSON.stringify(recAll)), recJson, 'readCAR whole');
 
       line += '.';
       process.stdout.write('.');
-      assert.deepEqual(JSON.parse(JSON.stringify(carIter[i])), carJSON[i], 'readCAR iter');
+      assert.deepEqual(JSON.parse(JSON.stringify(recIter)), recJson, 'readCAR iter');
 
       lastLine = line;
     }

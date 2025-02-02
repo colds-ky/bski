@@ -1,6 +1,6 @@
 // @ts-check
 
-import { readCar/*, iterateAtpRepo */ } from '@atcute/car';
+import { readCar, iterateAtpRepo } from '@atcute/car';
 import { decode, toCidLink } from '@atcute/cbor';
 
 const YIELD_AFTER_ITERATION = 300;
@@ -163,3 +163,85 @@ function* sequenceReadCARCore(messageBuf, did, yieldAfterIteration) {
   return all;
 }
 
+/**
+ * @param {ArrayBuffer | Uint8Array} messageBuf
+ * @param {string} did
+ */
+export function readCARATC(messageBuf, did) {
+  if (typeof messageBuf === 'string')
+    [messageBuf, did] = /** @type {[any, any]} */([did, messageBuf]);
+
+  // for (const x of iterateAtpRepo(messageBuf)) {
+  //   console.log(x);
+  // }
+
+  /** @type {import('./firehose').FirehoseRepositoryRecord<keyof import('./firehose').RepositoryRecordTypes$>[] & { parseTime: number } | undefined} */
+  let all;
+  for (const _chunk of sequenceReadCARCore(messageBuf, did, Infinity)) {
+    if (_chunk) all = _chunk;
+  }
+  return   /** @type {NonNullable<typeof all>} */(all);
+}
+
+/**
+ * @param {ArrayBuffer | Uint8Array} messageBuf
+ * @param {string} did
+ */
+export function sequenceReadCARATC(messageBuf, did) {
+  return sequenceReadCARCoreATC(messageBuf, did, YIELD_AFTER_ITERATION);
+}
+
+/**
+ * @param {ArrayBuffer | Uint8Array} messageBuf
+ * @param {string} did
+ * @param {number} yieldAfterIteration
+ */
+function* sequenceReadCARCoreATC(messageBuf, did, yieldAfterIteration) {
+  if (typeof messageBuf === 'string')
+    [messageBuf, did] = /** @type {[any, any]} */([did, messageBuf]);
+
+  const parseStart = Date.now();
+  let pauseTime = 0;
+
+  let batchParseStart = parseStart;
+
+  const bytes = messageBuf instanceof ArrayBuffer ? new Uint8Array(messageBuf) : messageBuf;
+
+  /** @type {import('./firehose').FirehoseRecord[] & { parseTime: number }} */
+  let batch = /** @type {*} */([]);
+
+  /** @type {import('./firehose').FirehoseRecord[] & { parseTime: number }} */
+  const all = /** @type {*} */([]);
+
+  let iteration = 0;
+  for (const entry of iterateAtpRepo(bytes)) {
+    const { cid: { $link: cid }, collection, rkey, record } = entry;
+
+    record.repo = did;
+    record.cid = cid;
+    record.path = collection + '/' + rkey;
+    record.uri = 'at://' + did + '/' + collection + '/' + rkey;
+
+    batch.push(record);
+    all.push(record);
+
+    iteration++;
+    if (iteration % yieldAfterIteration === yieldAfterIteration - 1) {
+      const pauseStart = Date.now();
+      batch.parseTime = pauseStart - batchParseStart;
+      yield batch;
+      batch = /** @type {*} */([]);
+      batchParseStart = Date.now();
+      pauseTime += batchParseStart - pauseStart;
+    }
+  }
+
+
+  const finish = Date.now();
+  if (batch.length) {
+    batch.parseTime = finish - batchParseStart;
+    yield batch;
+  }
+  all.parseTime = finish - parseStart - pauseTime;
+  return all;
+}
