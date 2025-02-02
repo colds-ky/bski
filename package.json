@@ -1,6 +1,6 @@
 {
   "name": "bski",
-  "version": "0.9.9",
+  "version": "0.9.10",
   "author": "Oleg Mihailik",
   "license": "MIT",
   "description": "BlueSky firehose/WebSocket and CAR in plain JavaScript",
@@ -12,7 +12,7 @@
   },
   "type": "module",
   "scripts": {
-    "build": "esbuild --bundle index.js --format=iife --sourcemap --global-name=bski --outfile=index.cjs",
+    "build": "esbuild --bundle index.js --tsconfig=tsconfig.json --format=iife --sourcemap --global-name=bski --outfile=index.cjs",
     "build-rollup": "rollup index.js --format=iife --sourcemap --name=bski --file=index.cjs",
     "test": "node tests/test.cjs"
   },

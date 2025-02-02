@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@atcute/uint8array": ["atcute/packages/utilities/uint8array/lib/index.ts"],
+      "@atcute/varint": ["atcute/packages/utilities/varint/lib"],
+      "@atcute/cid": ["atcute/packages/utilities/cid/lib"],
+      "@atcute/multibase": ["atcute/packages/utilities/multibase/lib"],
+      "#bases/base64": ["atcute/packages/utilities/multibase/lib/bases/base64-web.ts"],
+      "#bases/base16": ["atcute/packages/utilities/multibase/lib/bases/base16-web.ts"],
+      "@atcute/car": ["atcute/packages/utilities/car/lib"],
+      "@atcute/cbor": ["atcute/packages/utilities/cbor/lib"]
+    }
+  }
+}
