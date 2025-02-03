@@ -1,7 +1,8 @@
 // @ts-check
 
 import { readCar, iterateAtpRepo } from '@atcute/car';
-import { decode, toCidLink } from '@atcute/cbor';
+import { decode } from '@atcute/cbor';
+import { toString as CID_toString } from '@atcute/cid';
 
 const YIELD_AFTER_ITERATION = 300;
 
@@ -71,7 +72,7 @@ function* sequenceReadCARCore(messageBuf, did, yieldAfterIteration) {
 
     const record = decode(block.bytes);
     if (record.$type) {
-      const blockCid = toCidLink(block.cid).$link;
+      const blockCid = CID_toString(block.cid);
       recordsByCid.set(blockCid, record);
     } else if (Array.isArray(record.e)) {
       let key = '';
