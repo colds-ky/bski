@@ -282,12 +282,13 @@ export async function* firehose(address) {
       for (let opIndex = 0; opIndex < commit.ops.length; opIndex++) {
         const op = commit.ops[opIndex];
         const action = op.action;
+        const cid = op.cid?.$link;
 
         const now = performance.now();
-        const record = op.cid ? car.get(op.cid.$link) : undefined;
+        const record = cid ? car.get(cid) : undefined;
 
         if (action === 'create' || action === 'update') {
-          if (!op.cid) {
+          if (!cid) {
             buf.block.push({
               $type: 'error',
               message: 'Missing commit.ops[' + (opIndex - 1) + '].cid.',
@@ -302,7 +303,7 @@ export async function* firehose(address) {
           if (!record) {
             buf.block.push({
               $type: 'error',
-              message: 'Unresolved commit.ops[' + (opIndex - 1) + '].cid ' + op.cid,
+              message: 'Unresolved commit.ops[' + (opIndex - 1) + '].cid ' + cid,
               receiveTimestamp,
               parseTime: now - parseStart,
               commit
@@ -314,7 +315,7 @@ export async function* firehose(address) {
           record.action = action;
           record.uri = 'at://' + commit.repo + '/' + op.path;
           record.path = op.path;
-          record.cid = op.cid;
+          record.cid = cid;
           record.receiveTimestamp = receiveTimestamp;
           record.parseTime = now - parseStart;
 
