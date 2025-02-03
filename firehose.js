@@ -1,5 +1,5 @@
 // @ts-check
-/// <reference types='@atproto/api' />
+/// <reference types='./records' />
 
 import { readCar } from '@atcute/car';
 import { decode, decodeFirst, fromBytes, toCidLink } from '@atcute/cbor';
@@ -11,20 +11,20 @@ const emptyUint8Array = new Uint8Array();
 
 /**
  * @typedef {{
- *  'app.bsky.feed.like': import('@atproto/api').AppBskyFeedLike.Record,
- *  'app.bsky.feed.post': import('@atproto/api').AppBskyFeedPost.Record,
- *  'app.bsky.feed.repost': import('@atproto/api').AppBskyFeedRepost.Record,
- *  'app.bsky.feed.threadgate': import('@atproto/api').AppBskyFeedThreadgate.Record,
- *  'app.bsky.graph.follow': import('@atproto/api').AppBskyGraphFollow.Record,
- *  'app.bsky.graph.block': import('@atproto/api').AppBskyGraphBlock.Record,
- *  'app.bsky.graph.list': import('@atproto/api').AppBskyGraphList.Record,
- *  'app.bsky.graph.listitem': import('@atproto/api').AppBskyGraphListitem.Record,
- *  'app.bsky.graph.listblock': import('@atproto/api').AppBskyGraphListblock.Record,
- *  'app.bsky.actor.profile': import('@atproto/api').AppBskyActorProfile.Record
- *  'app.bsky.feed.generator': import('@atproto/api').AppBskyFeedGenerator.Record
- *  'app.bsky.feed.postgate': import('@atproto/api').AppBskyFeedPostgate.Record
- *  'chat.bsky.actor.declaration': import('@atproto/api').ChatBskyActorDeclaration.Record,
- *  'app.bsky.graph.starterpack': import('@atproto/api').AppBskyGraphStarterpack.Record
+ *  'app.bsky.feed.like': AppBskyFeedLike,
+ *  'app.bsky.feed.post': AppBskyFeedPost,
+ *  'app.bsky.feed.repost': AppBskyFeedRepost,
+ *  'app.bsky.feed.threadgate': AppBskyFeedThreadgate,
+ *  'app.bsky.graph.follow': AppBskyGraphFollow,
+ *  'app.bsky.graph.block': AppBskyGraphBlock,
+ *  'app.bsky.graph.list': AppBskyGraphList,
+ *  'app.bsky.graph.listitem': AppBskyGraphListitem,
+ *  'app.bsky.graph.listblock': AppBskyGraphListblock,
+ *  'app.bsky.actor.profile': AppBskyActorProfile
+ *  'app.bsky.feed.generator': AppBskyFeedGenerator
+ *  'app.bsky.feed.postgate': AppBskyFeedPostgate
+ *  'chat.bsky.actor.declaration': ChatBskyActorDeclaration,
+ *  'app.bsky.graph.starterpack': AppBskyGraphStarterpack
  * }} RepositoryRecordTypes$
  */
 
@@ -321,12 +321,12 @@ export async function* firehose(address) {
           buf.block.push(record);
           continue;
         } else if (action === 'delete') {
-          buf.block.push({
+          buf.block.push(/** @type {FirehoseDeleteRecord} */({
             action,
             path: op.path,
             receiveTimestamp,
             parseTime: now - parseStart
-          });
+          }));
           parseStart = now;
         } else {
           buf.block.push({

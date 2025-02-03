@@ -1,6 +1,6 @@
 // @ts-check
 
-import { readCar, iterateAtpRepo } from '@atcute/car';
+import { iterateAtpRepo, readCar } from '@atcute/car';
 import { decode } from '@atcute/cbor';
 import { toString as CID_toString } from '@atcute/cid';
 
@@ -14,11 +14,7 @@ export function readCAR(messageBuf, did) {
   if (typeof messageBuf === 'string')
     [messageBuf, did] = /** @type {[any, any]} */([did, messageBuf]);
 
-  // for (const x of iterateAtpRepo(messageBuf)) {
-  //   console.log(x);
-  // }
-
-  /** @type {import('./firehose').FirehoseRepositoryRecord<keyof import('./firehose').RepositoryRecordTypes$>[] & { parseTime: number } | undefined} */
+  /** @type {import('./firehose').FirehoseRecord[] & { parseTime: number } | undefined} */
   let all;
   for (const _chunk of sequenceReadCARCore(messageBuf, did, Infinity)) {
     if (_chunk) all = _chunk;
@@ -122,11 +118,11 @@ function* sequenceReadCARCore(messageBuf, did, yieldAfterIteration) {
     /** @type {import('./firehose').FirehoseRecord} */
     const record = entry[1];
     record.repo = did;
-    record.cid = cid;
+    /** @type {*} */(record).cid = cid;
     const key = keyByCid.get(cid);
     if (key) {
-      record.path = key;
-      record.uri = 'at://' + did + '/' + key;
+      /** @type {*} */(record).path = key;
+      /** @type {*} */(record).uri = 'at://' + did + '/' + key;
     }
 
     // let's recreate the record, to pack the GC and avoid deoptimized objects
@@ -176,7 +172,7 @@ export function readCARATC(messageBuf, did) {
   //   console.log(x);
   // }
 
-  /** @type {import('./firehose').FirehoseRepositoryRecord<keyof import('./firehose').RepositoryRecordTypes$>[] & { parseTime: number } | undefined} */
+  /** @type {import('./firehose').FirehoseRecord[] & { parseTime: number } | undefined} */
   let all;
   for (const _chunk of sequenceReadCARCore(messageBuf, did, Infinity)) {
     if (_chunk) all = _chunk;
@@ -216,7 +212,16 @@ function* sequenceReadCARCoreATC(messageBuf, did, yieldAfterIteration) {
 
   let iteration = 0;
   for (const entry of iterateAtpRepo(bytes)) {
-    const { cid: { $link: cid }, collection, rkey, record } = entry;
+    const {
+      cid: { $link: cid },
+      collection,
+      rkey,
+      record
+    } =
+    /**
+     * @type {typeof entry & {
+     *  record: import('./firehose').FirehoseRepositoryRecord<'app.bsky.feed.like'>
+     * }} */(entry);
 
     record.repo = did;
     record.cid = cid;
