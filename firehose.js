@@ -128,8 +128,7 @@ export const known$Types = /** @type {const} */([
 firehose.knownTypes = known$Types;
 
 function requireWebsocket() {
-  const globalObj = typeof global !== 'undefined' && global || typeof globalThis !== 'undefined' && globalThis;
-  const requireFn = globalObj?.['require'];
+  const requireFn = typeof require === 'function' ? require : undefined;
   if (typeof requireFn === 'function') return /** @type {typeof WebSocket} */(requireFn('ws'));
   throw new Error('WebSocket not available');
 }
@@ -312,6 +311,7 @@ export async function* firehose(address) {
             continue;
           }
 
+          record.repo = commit.repo;
           record.action = action;
           record.uri = 'at://' + commit.repo + '/' + op.path;
           record.path = op.path;

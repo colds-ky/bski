@@ -6,13 +6,41 @@ const bskyAppDID = 'did:plc:z72i7hdynmk6r22z27h6tvur';
 const retr0idDID = 'did:plc:vwzwgnygau7ed7b7wt5ux7y2';
 
 const indexScript = fs.readFileSync(path.resolve(__dirname, '../index.cjs'), 'utf-8');
-debugger;
 eval(indexScript);
 
-while (true) {
+(async () => {
 
-  console.log('\nBSKI EMBEDDED');
-  withReadCAR(bski);
+  console.log('BSKI FIREHOSE...');
+  await tryRunFirehose(bski);
+
+  while (true) {
+
+    console.log('\nBSKI EMBEDDED');
+    withReadCAR(bski);
+
+  }
+
+})();
+
+async function tryRunFirehose({ firehose }) {
+  let reportNext = 0;
+  let reportCount = 0;
+  let stopReporting = 0;
+
+  for await (const chunk of firehose()) {
+    reportCount += chunk.length;
+
+    const now = Date.now();
+    if (!reportNext) {
+      reportNext = now + 1000;
+      stopReporting = now + 10000;
+    } else if (now >= reportNext) {
+      console.log(' +' + reportCount.toLocaleString() + ' records');
+      reportNext = now + 1000;
+    }
+
+    if (stopReporting && now >= stopReporting) break;
+  }
 
 }
 
@@ -46,7 +74,7 @@ function withReadCAR({ readCAR, sequenceReadCAR }) {
         carIter.push(rec);
       }
     }
-    console.log(parseTime2.toLocaleString() + ' ms');
+    console.log(parseTime2.toLocaleString() + 'ms');
 
     fs.writeFileSync(jsonFilename, JSON.stringify(carAll, null, 2));
     fs.writeFileSync(jsonFilename.replace(/\.json$/, '-iter.json'), JSON.stringify(carIter, null, 2));
